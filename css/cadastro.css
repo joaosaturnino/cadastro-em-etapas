@@ -77,7 +77,7 @@ form .page .field select{
   font-size: 17px;
   font-weight: 500;
 }
-form .page .field button{
+form .page .field button, form .button div{
   width: 100%;
   height: calc(100% + 5px);
   border: none;

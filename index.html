@@ -47,23 +47,23 @@
         </div>
       </div>
       <div class="form-outer">
-        <form action="#">
+        <form method="post" action="./acoes/cadastroest.php">
           <div class="page slide-page">
             <div class="title">Informações básicas:</div>
             <div class="field">
               <div class="label">Estabelecimento:</div>
-              <input type="text" placeholder="Nome do estabelecimento">
+              <input type="text" name="estNome" placeholder="Nome do estabelecimento">
             </div>
             <div class="field">
               <div class="label">CNPJ:</div>
-              <input type="text" placeholder="Apenas números">
+              <input type="text" name="estDocumento" placeholder="Apenas números">
             </div>
             <div class="field">
               <div class="label">Logo:</div>
-              <input type="file">
+              <input type="file" name="estLogo">
             </div>
-            <div class="field">
-              <button class="firstNext next">Próximo</button>
+            <div class="button">
+              <div class="firstNext next">Próximo</div>
             </div>
           </div>
 
@@ -71,19 +71,22 @@
             <div class="title">Informações de contato:</div>
             <div class="field">
               <div class="label">Endereço:</div>
-              <input type="text" placeholder="Enderço do estabelecimento">
+              <input type="text" name="estEndereco" placeholder="Enderço do estabelecimento">
             </div>
             <div class="field">
               <div class="label">Cidade:</div>
-              <input type="text" placeholder="Cidade">
+              <select name="cid_Id" id="tipo-select">
+                <option value="" selected hidden disabled>Escolha uma opção</option>
+                <option value="inteira">Tupã-SP</option>                    
+              </select>
             </div>
             <div class="field">
               <div class="label">Telefone:</div>
-              <input type="Number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do telefone">
+              <input type="Number" name="estTelefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do telefone">
             </div>
             <div class="field">
               <div class="label">Whatsapp:</div>
-              <input type="Number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do Whatsapp">
+              <input type="Number" name="estWhatsapp" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do Whatsapp">
             </div>
             <div class="field btns">
               <button class="prev-1 prev">Anterior</button>
@@ -95,11 +98,11 @@
             <div class="title">Redes Sociais:</div>
             <div class="field">
               <div class="label">Facebook:</div>
-              <input type="text" placeholder="Link(opcional)">
+              <input type="text" name="lnk_face" placeholder="Link(opcional)">
             </div>
             <div class="field">
               <div class="label">Instagran:</div>
-              <input type="text" placeholder="Link(opcional)">
+              <input type="text" name="lnk_inst" placeholder="Link(opcional)">
             </div>
             <div class="field btns">
               <button class="prev-2 prev">Anterior</button>
@@ -111,15 +114,15 @@
             <div class="title">App Delivery:</div>
             <div class="field">
               <div class="label">Ifood:</div>
-              <input type="text" placeholder="Link(opcional)">
+              <input type="text" name="lnk_ifood" placeholder="Link(opcional)">
             </div>
             <div class="field">
               <div class="label">Delivery Much:</div>
-              <input type="text" placeholder="Link(opcional)">
+              <input type="text" name="lnk_much" placeholder="Link(opcional)">
             </div>
             <div class="field">
               <div class="label">Ai Q Fome:</div>
-              <input type="text" placeholder="Link(opcional)">
+              <input type="text" name="lnk_aiqfome" placeholder="Link(opcional)">
             </div>
             <div class="field btns">
               <button class="prev-3 prev">Anterior</button>
@@ -131,11 +134,11 @@
             <div class="title">Detalhes de login:</div>
             <div class="field">
               <div class="label">Email:</div>
-              <input type="text" placeholder="Insira seu email">
+              <input type="text" name="estEmail" placeholder="Insira seu email">
             </div>
             <div class="field">
               <div class="label">Senha:</div>
-              <input type="password" placeholder="Insira sua senha">
+              <input type="password" name="estSenha" placeholder="Insira sua senha">
             </div>
             <div class="field btns">
               <button class="prev-4 prev">Anterior</button>
