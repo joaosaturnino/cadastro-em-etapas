@@ -92,7 +92,7 @@ form .page .field button, form .button div{
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-form .page .field button:hover{
+form .page .field button:hover, form .button div{
   background: rgb(233, 218, 12);
 }
 form .page .btns button{
