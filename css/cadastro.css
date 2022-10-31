@@ -77,8 +77,8 @@ form .page .field select{
   font-size: 17px;
   font-weight: 500;
 }
-form .page .field button, form .button div{
-  width: 100%;
+form .page .field button, form .input div{
+  width: 50%;
   height: calc(100% + 5px);
   border: none;
   background: #f0b212;
@@ -92,17 +92,17 @@ form .page .field button, form .button div{
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-form .page .field button:hover, form .button div{
+form .page .field button:hover, form .input:hover div{
   background: rgb(233, 218, 12);
 }
-form .page .btns button{
+form .page .btns button, form .input div{
   margin-top: -20px!important;
 }
-form .page .btns button.prev{
+form .page .btns button.prev, form .input.prev div.prev{
   margin-right: 3px;
   font-size: 17px;
 }
-form .page .btns button.next{
+form .page .btns button.next, form .input.next div.next{
   margin-left: 3px;
 }
 .container .progress-bar{
