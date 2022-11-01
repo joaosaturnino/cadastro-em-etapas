@@ -29,10 +29,10 @@ empty($_REQUEST["estSenha"])        ? $estSenha = ""        : $estSenha = $_REQU
 		
 		$consulta = mysqli_query($conn, $sql);
 		$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
-		include("upload.php"); //neste ponto chama o arquivo para fazer o upload da foto
+		include("uploadest.php"); //neste ponto chama o arquivo para fazer o upload da foto
 	}
 
 	mysqli_close($conn); 
 
-	header("location:../login.html?msg=Produto cadastrado com sucesso!");
+	header("location:../index.html?msg=Produto cadastrado com sucesso!");
 ?>

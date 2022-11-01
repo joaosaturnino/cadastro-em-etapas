@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BuscaFood®</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <a href="index.html">Voltar</a>
+    <div class="container">
+      <header>Cadastro</header>
+      <div class="progress-bar">
+        <div class="step">
+          <p>Nome</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Contato</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Social</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Delivery</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>Enviar</p>
+          <div class="bullet">
+            <span>5</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data">
+          <p>
+            <input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
+          </p>
+          <div class="page slide-page">
+            <div class="title">Informações básicas:</div>
+            <div class="field">
+              <div class="label">Estabelecimento:</div>
+              <input type="text" name="estNome" placeholder="Nome do estabelecimento">
+            </div>
+            <div class="field">
+              <div class="label">CNPJ:</div>
+              <input type="text" name="estDocumento" placeholder="Apenas números">
+            </div>
+            <div class="field">
+              <div class="label">Logo:</div>
+              <input type="file" name="estLogo">
+            </div>
+            <div class="button">
+              <div class="firstNext next">Próximo</div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Informações de contato:</div>
+            <div class="field">
+              <div class="label">Endereço:</div>
+              <input type="text" name="estEndereco" placeholder="Enderço do estabelecimento">
+            </div>
+            <div class="field">
+              <div class="label">Cidade:</div>
+              <select name="cid_Id" id="tipo-select">
+                <option value="" selected hidden disabled>Escolha uma opção</option>
+                <option value="3884">Tupã-SP</option>                    
+              </select>
+            </div>
+            <div class="field">
+              <div class="label">Telefone:</div>
+              <input type="Number" name="estTelefone" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do telefone">
+            </div>
+            <div class="field">
+              <div class="label">Whatsapp:</div>
+              <input type="Number" name="estWhatsapp" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="Número do Whatsapp">
+            </div>
+            <!-- <div class="button">
+              <button class="prev-1 prev">Anterior</button>
+            </div> -->
+            <div class="button">
+              <div class="next-1 next">Próximo</div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Redes Sociais:</div>
+            <div class="field">
+              <div class="label">Facebook:</div>
+              <input type="text" name="lnk_face" placeholder="Link(opcional)">
+            </div>
+            <div class="field">
+              <div class="label">Instagran:</div>
+              <input type="text" name="lnk_inst" placeholder="Link(opcional)">
+            </div>
+            <!-- <div class="button">
+              <div class="prev-2 prev">Anterior</div>
+            </div> -->
+            <div class="button">
+              <div class="next-2 next">Próximo</div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">App Delivery:</div>
+            <div class="field">
+              <div class="label">Ifood:</div>
+              <input type="text" name="lnk_ifood" placeholder="Link(opcional)">
+            </div>
+            <div class="field">
+              <div class="label">Delivery Much:</div>
+              <input type="text" name="lnk_much" placeholder="Link(opcional)">
+            </div>
+            <div class="field">
+              <div class="label">Ai Q Fome:</div>
+              <input type="text" name="lnk_aiqfome" placeholder="Link(opcional)">
+            </div>
+            <!-- <div class="button">
+              <div class="prev-3 prev">Anterior</div>
+            </div> -->
+            <div class="button">
+              <div class="next-3 next">Próximo</div>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Detalhes de login:</div>
+            <div class="field">
+              <div class="label">Email:</div>
+              <input type="text" name="estEmail" placeholder="Insira seu email">
+            </div>
+            <div class="field">
+              <div class="label">Senha:</div>
+              <input type="password" name="estSenha" placeholder="Insira sua senha">
+            </div>
+            <!-- <div class="button">
+              <div class="prev-4 prev">Anterior</div>
+            </div> -->
+            <div class="button">
+              <input type="submit" name="btn_submit" value="Cadastrar">
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+
+  </body>
+</html>

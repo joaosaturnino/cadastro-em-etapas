@@ -2,8 +2,7 @@
 $host = '127.0.0.1';
 $usuario = 'root';
 $senha = '';
-$bd = 'buscateste';
-
+$bd = 'busca_food';
 
     $conn = @mysqli_connect ($host, $usuario, $senha, $bd);
 
