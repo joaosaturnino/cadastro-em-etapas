@@ -13,7 +13,7 @@ if(!empty($estLogo["tmp_name"])) {
 	$consulta = mysqli_query($conn,$sql); //executa o sql
 	
 	if (is_uploaded_file($estLogo["tmp_name"])){ //faz o upload, se ok
-		move_uploaded_file($estLogo["tmp_name"],".images/estabelecimentos/".$nome_arquivo); //move para a pasta fotos
+		move_uploaded_file($estLogo["tmp_name"],"../images/estabelecimentos/".$nome_arquivo); //move para a pasta fotos
 	}
 	else{
 		echo "erro ao fazer upload.<br>";

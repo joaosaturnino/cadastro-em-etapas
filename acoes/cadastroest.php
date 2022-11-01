@@ -33,4 +33,6 @@ empty($_REQUEST["estSenha"])        ? $estSenha = ""        : $estSenha = $_REQU
 	}
 
 	mysqli_close($conn); 
+
+	header("location:../login.html?msg=Produto cadastrado com sucesso!");
 ?>
