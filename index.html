@@ -47,7 +47,10 @@
         </div>
       </div>
       <div class="form-outer">
-        <form method="post" action="./acoes/cadastroest.php">
+        <form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data">
+          <p>
+            <input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
+          </p>
           <div class="page slide-page">
             <div class="title">Informações básicas:</div>
             <div class="field">
@@ -77,7 +80,7 @@
               <div class="label">Cidade:</div>
               <select name="cid_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
-                <option value="inteira">Tupã-SP</option>                    
+                <option value="3884">Tupã-SP</option>                    
               </select>
             </div>
             <div class="field">
@@ -92,7 +95,6 @@
               <div class="prev-1 prev">Anterior</div>
             </div>
             <div class="button">
-              
               <div class="next-1 next">Próximo</div>
             </div>
           </div>
@@ -107,9 +109,11 @@
               <div class="label">Instagran:</div>
               <input type="text" name="lnk_inst" placeholder="Link(opcional)">
             </div>
-            <div class="field btns">
-              <button class="prev-2 prev">Anterior</button>
-              <button class="next-2 next">Próximo</button>
+            <div class="button">
+              <div class="prev-2 prev">Anterior</div>
+            </div>
+            <div class="button">
+              <div class="next-2 next">Próximo</div>
             </div>
           </div>
 
@@ -127,9 +131,11 @@
               <div class="label">Ai Q Fome:</div>
               <input type="text" name="lnk_aiqfome" placeholder="Link(opcional)">
             </div>
-            <div class="field btns">
-              <button class="prev-3 prev">Anterior</button>
-              <button class="next-3 next">Próximo</button>
+            <div class="button">
+              <div class="prev-3 prev">Anterior</div>
+            </div>
+            <div class="button">
+              <div class="next-3 next">Próximo</div>
             </div>
           </div>
 
@@ -143,9 +149,11 @@
               <div class="label">Senha:</div>
               <input type="password" name="estSenha" placeholder="Insira sua senha">
             </div>
-            <div class="field btns">
-              <button class="prev-4 prev">Anterior</button>
-              <button class="submit">Enviar</button>
+            <div class="button">
+              <div class="prev-4 prev">Anterior</div>
+            </div>
+            <div class="button">
+              <input type="submit" name="btn_submit" value="Cadastrar">
             </div>
           </div>
           
