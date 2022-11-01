@@ -1,15 +1,19 @@
 <?php
-    $server = "127.0.0.1";
-    $usuario = "root";
-    $senha = "";
-    $banco = "buscateste";
+$host = '127.0.0.1';
+$usuario = 'root';
+$senha = '';
+$bd = 'buscateste';
 
-    try{
-        $conexao = new PDO("mysql:host=$server;dbname=$banco", $usuario, $senha);
-        $conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }catch(PDOException $erro){
-        // echo "Ocorreu um erro de conexão: {$erro -> getMessage()}";
-        $conexao = null;
+    $conn = @mysqli_connect ($host, $usuario, $senha, $bd);
+
+    if($conn)
+    {
+        $banco = @mysqli_select_db($conn, $bd);        
     }
-    
+    else
+    {
+        
+        print('Erro! Conexão não realizada!');
+    }
+
 ?>
