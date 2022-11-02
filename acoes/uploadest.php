@@ -8,8 +8,8 @@ if( empty($_FILES['estLogo']) ){
 	}
 
 if(!empty($estLogo["tmp_name"])) {
-	$nome_arquivo = "logo".$codprod.".jpg"; //o nome do arquivo(prod+codproduto.jpg)
-	$sql = "UPDATE estabelecimentos SET estLogo = '".$nome_arquivo. "' WHERE estId=".$codprod;
+	$nome_arquivo = "logo".$codest.".jpg"; //o nome do arquivo(prod+codproduto.jpg)
+	$sql = "UPDATE estabelecimentos SET estLogo = '".$nome_arquivo. "' WHERE estId=".$codest;
 	$consulta = mysqli_query($conn,$sql); //executa o sql
 	
 	if (is_uploaded_file($estLogo["tmp_name"])){ //faz o upload, se ok

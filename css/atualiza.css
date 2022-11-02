@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  /* padding: 0; */
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
+}
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 15px;
+    width: 40%;
+    color: white;
+}
+fieldset{
+    border: 3px solid #f0b212;
+}
+legend{
+    border: 1px solid #f0b212;
+    padding: 10px;
+    text-align: center;
+    background-color: #f0b212;
+    border-radius: 8px; 
+}
+.inputBox{
+    position: relative;
+}
+.inputProd{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5px;
+}
+.inputProd:focus ~ .labelInput,
+.inputProd:valid ~.labelInput{
+    top: -20px;
+    font-size: 12px;
+}
+#update{
+    background:#f0b212;
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#submit:hover{
+    background: rgb(233, 218, 12);
+}

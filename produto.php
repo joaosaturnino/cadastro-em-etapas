@@ -19,9 +19,10 @@
   //   $tam_Id = $_POST['tam_Id'];
   //   $cat_Id = $_POST['cat_Id'];
   //   $proDescricao = $_POST['proDescricao'];
+  //   // $est_Id = $_POST['est_Id'];
   //   // $proImagem = $_FILES['proImagem'];
 
-  //   $result = mysqli_query($conn, "INSERT INTO produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao 
+  //   $result = mysqli_query($conn, "INSERT INTO produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao) 
   //   VALUES ('$proNome','$proPreco','$tam_Id','$cat_Id','$proDescricao')");
   // }
 ?>
@@ -36,7 +37,7 @@
 </head>
 <body>
     <div class="box">
-      <form action="./acoes/cadastropro.php" method="post">
+      <form action="./acoes/cadastropro.php?id=$codprod[proId]" method="POST">
         <fieldset>
           <legend><b>Cadastro de Produtos</b></legend>
           <br>
@@ -51,7 +52,7 @@
           </div>
           <br>
           <p>Tamanho:</p>
-          <select name="tam_id" id="tipo-select">
+          <select name="tam_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
                 <option value="1">Pequena</option>   
                 <option value="2">Média</option>  
