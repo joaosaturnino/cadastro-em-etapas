@@ -1,10 +1,29 @@
 <?php
 
-  if(isset($_POST['submit'])){
-    print_r($_POST['proNome']);
-    print_r($_POST['proPreco']);
-    print_r($_POST['proDescricao']);
-  }
+  // if(isset($_POST['submit'])){
+
+  //   // print_r('Produto: ' . $_POST['proNome']);
+  //   // print_r('<br>');
+  //   // print_r('Preço: ' . $_POST['proPreco']);
+  //   // print_r('<br>');
+  //   // print_r('Tamanho: ' . $_POST['tam_Id']);
+  //   // print_r('<br>');
+  //   // print_r('Categoria: ' . $_POST['cat_Id']);
+  //   // print_r('<br');
+  //   // print_r('Descrição: ' . $_POST['proDescricao']);
+
+  //   include_once('./acoes/conexao.php');
+
+  //   $proNome = $_POST['proNome'];
+  //   $proPreco = $_POST['proPreco'];
+  //   $tam_Id = $_POST['tam_Id'];
+  //   $cat_Id = $_POST['cat_Id'];
+  //   $proDescricao = $_POST['proDescricao'];
+  //   // $proImagem = $_FILES['proImagem'];
+
+  //   $result = mysqli_query($conn, "INSERT INTO produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao 
+  //   VALUES ('$proNome','$proPreco','$tam_Id','$cat_Id','$proDescricao')");
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,12 +36,12 @@
 </head>
 <body>
     <div class="box">
-      <form action="produto.php" method="post">
+      <form action="./acoes/cadastropro.php" method="post">
         <fieldset>
           <legend><b>Cadastro de Produtos</b></legend>
           <br>
           <div class="inputBox">
-            <input type="text" name="proNaome" id="proNome" class="inputProd" required>
+            <input type="text" name="proNome" id="proNome" class="inputProd" required>
             <label class="labelInput">Produto:</label>
           </div>
           <br>
@@ -32,22 +51,22 @@
           </div>
           <br>
           <p>Tamanho:</p>
-          <input type="radio" id="tam_Id" name="tam_Id" value="1" required>
-          <label for="pequena">Pequena</label>
-          <input type="radio" id="tam_Id" name="tam_Id" value="2" required>
-          <label for="media">Média</label>
-          <input type="radio" id="tam_Id" name="tam_Id" value="3" required>
-          <label for="grande">Grande</label>
+          <select name="tam_id" id="tipo-select">
+                <option value="" selected hidden disabled>Escolha uma opção</option>
+                <option value="1">Pequena</option>   
+                <option value="2">Média</option>  
+                <option value="3">Grande</option>           
+              </select>
+          
           <br>
           <p>Categoria:</p>
-          <input type="radio" id="cat_Id" name="cat_Id" value="1" required>
-          <label for="lanche">Lanche</label>
-          <input type="radio" id="cat_Id" name="cat_Id" value="2" required>
-          <label for="hot-dog">Hot-Dog</label>
-          <input type="radio" id="cat_Id" name="cat_Id" value="3" required>
-          <label for="porcao">Porção</label>
-          <input type="radio" id="cat_Id" name="cat_Id" value="4" required>
-          <label for="pizza">Pizza</label>
+          <select name="cat_Id" id="tipo-select">
+                <option value="" selected hidden disabled>Escolha uma opção</option>
+                <option value="1">Lanche</option>   
+                <option value="2">Hot-Dog</option>  
+                <option value="3">Porção</option> 
+                <option value="4">Pizza</option>              
+              </select>
           <br>
           <div class="inputBox">
             <label>Descrição:</label>
