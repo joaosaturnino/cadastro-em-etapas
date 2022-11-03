@@ -48,6 +48,7 @@
   <link rel="stylesheet" href="./css/atualiza.css">
 </head>
 <body>
+<header>BuscaFood®</header>
     <div class="box">
       <form action="./acoes/saveEdit.php" method="POST">
         <fieldset>

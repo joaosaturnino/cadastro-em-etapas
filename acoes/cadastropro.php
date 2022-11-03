@@ -5,7 +5,7 @@ empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQU
 empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
 empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
 empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
-empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagemo = $_FILES["proImagem"];
+empty($_FILES["proImagem"])         ? $proImagem = ""         : $proImagem = $_FILES["proImagem"];
 
 	include("conexao.php");
 	// $id = $_GET['id'];

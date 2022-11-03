@@ -6,8 +6,17 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
+    /* background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212); */
 }
+header{
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 3px;
+    background: black;
+  }
 .box{
     position: absolute;
     top: 50%;

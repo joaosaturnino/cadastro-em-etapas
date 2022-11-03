@@ -36,8 +36,10 @@
   <link rel="stylesheet" href="./css/produto.css">
 </head>
 <body>
+  <header>BuscaFood®</header>
+  
     <div class="box">
-      <form action="./acoes/cadastropro.php?id=$codprod[proId]" method="POST">
+      <form action="./acoes/cadastropro.php?id=$codprod[proId]" method="post" enctype="multipart/form-data">
         <fieldset>
           <legend><b>Cadastro de Produtos</b></legend>
           <br>
@@ -52,26 +54,40 @@
           </div>
           <br>
           <p>Tamanho:</p>
-          <select name="tam_Id" id="tipo-select">
+          <input type="radio" id="pequena" name="tam_Id" value="1" required>
+          <label for="pequena">Pequena</label>
+          <input type="radio" id="media" name="tam_Id" value="2" required>
+          <label for="media">Média</label>
+          <input type="radio" id="grande" name="tam_Id" value="3" required>
+          <label for="grande">Grande</label>
+          <!-- <select name="tam_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
                 <option value="1">Pequena</option>   
                 <option value="2">Média</option>  
                 <option value="3">Grande</option>           
-              </select>
+              </select> -->
           
           <br>
           <p>Categoria:</p>
-          <select name="cat_Id" id="tipo-select">
+          <input type="radio" id="lanche" name="cat_Id" value="1" required>
+          <label for="lanche">Lanche</label>
+          <input type="radio" id="hot-dog" name="cat_Id" value="2" required>
+          <label for="hot-dog">Hot-Dog</label>
+          <input type="radio" id="porcao" name="cat_Id" value="3" required>
+          <label for="porcao">Porção</label>
+          <input type="radio" id="pizza" name="cat_Id" value="4" required>
+          <label for="pizza">Pizza</label>
+          <!-- <select name="cat_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
                 <option value="1">Lanche</option>   
                 <option value="2">Hot-Dog</option>  
                 <option value="3">Porção</option> 
                 <option value="4">Pizza</option>              
-              </select>
+              </select> -->
           <br>
           <div class="inputBox">
             <label>Descrição:</label>
-            <textarea type="text" name="proDescricao" id="proDescricao" class="inputProd" rows="5" required></textarea>
+            <input type="text" name="proDescricao" id="proDescricao" class="inputProd" rows="5" required></input>
           </div>
           <br>
           <div class="inputBox">
@@ -79,7 +95,11 @@
             <input type="file" name="proImagem" id="proImagem" class="inputProd">
           </div>
           <br>
-          <input type="submit" name="submit" id="submit">
+          <input type="submit" name="submit" id="submit" value="Cadastrar">
+          <!-- <button action="listarprod.php">Listar</button> -->
+          <div class="button">
+              <a href="listarprod.php">Produtos</a>
+            </div>
         </fieldset>
       </form>
     </div>
