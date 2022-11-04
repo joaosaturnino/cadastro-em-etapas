@@ -1,5 +1,5 @@
 <?php
-$id_estab = $_GET['idestab'];
+$codest = $_GET['id'];
 
 empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
 empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQUEST["proPreco"];
@@ -28,7 +28,7 @@ empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FIL
 	// }
 
     $sql = "Insert Into produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao, est_Id)".
-	"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."','".$est_Id."')";
+	"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."','".$codest."')";
 		
 		$consulta = mysqli_query($conn, $sql);
 		$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
