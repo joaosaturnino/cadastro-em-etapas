@@ -1,4 +1,5 @@
 <?php
+$id_estab = $_GET['id'];
 
 empty($_REQUEST["estNome"])         ? $estNome = ""         : $estNome = $_REQUEST["estNome"];
 empty($_REQUEST["estDocumento"])    ? $estDocumento = ""    : $estDocumento = $_REQUEST["estDocumento"];
