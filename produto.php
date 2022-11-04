@@ -1,5 +1,5 @@
 <?php
-
+  $id_estab = $_GET['id'];
   // if(isset($_POST['submit'])){
 
   //   // print_r('Produto: ' . $_POST['proNome']);
@@ -98,7 +98,8 @@
           <input type="submit" name="submit" id="submit" value="Cadastrar">
           <!-- <button action="listarprod.php">Listar</button> -->
           <div class="button">
-              <a href="listarprod.php">Produtos</a>
+            <?php
+              echo '<a href="listarprod.php?idestab='.$id_estab.'">Produtos</a>'; ?>
             </div>
         </fieldset>
       </form>

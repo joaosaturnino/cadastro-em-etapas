@@ -7,16 +7,31 @@
         unset($_SESSION['estSenha']);
         header('Location: index.html');
     }else{
-        
+             
         if(!empty($_GET['search'])){
             $data = $_GET['search'];
-            $sql = "SELECT * FROM produtos WHERE proId LIKE '%$data%' or proNome LIKE '%$data%' or proDescricao LIKE '%$data%' ORDER BY proId ASC";
-            // echo $data;
+            $id_estab = $_GET['idestab'];
+
+            $sql = "SELECT * FROM produtos p
+            INNER JOIN estabelecimentos e
+            ON e.estId = p.est_Id
+            WHERE p.est_Id = '$id_estab'  
+            AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
+            ORDER BY proId ASC";
+            //   echo $sql;
             // echo "<br>";
             // echo "contem algo, pesquisar";
-        }else{
+        }
+        else{
+            $id_estab = $_GET['idestab'];
             // echo "não temos nada, trazer todos os registros";
-            $sql = "SELECT * FROM produtos ORDER BY proId ASC";
+            $sql = "SELECT * FROM produtos p
+                    INNER JOIN estabelecimentos e
+                    ON e.estId = p.est_Id
+                    WHERE p.est_Id = ".$id_estab."
+                    ORDER BY proId ASC";
+
+                   
         }
         // $sql = "SELECT * FROM produtos ORDER BY proId ASC";
 
@@ -40,8 +55,10 @@
 </head>
 <body>
     <header>BuscaFood®</header>
+    <a href="./acoes/logout.php">Sair</a>
     <div class="box-search">
         <input type="search" class="form-control w=25" placeholder="Pesquisar" id="pesquisar">
+        <?php echo'<input type="hidden" id="estabelecimento" value="'.$id_estab.'">';  ?>
         <button onclick="searchData()" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -77,6 +94,7 @@
                         echo "<td>".$user_data['tam_Id']."</td>";
                         echo "<td>".$user_data['cat_Id']."</td>";
                         echo "<td>".$user_data['proDescricao']."</td>";
+                        echo "<td>".$user_data['est_Id']."</td>";
                         // echo "<td>".$user_data['est_Id']."</td>";
                         echo "<td>
                             <a class='btn btn-sm btn-warning' href='atualizaprod.php?id=$user_data[proId]'>
@@ -93,7 +111,7 @@
                             </svg>
                         </td>";
                         echo "<td>
-                        <a class='btn btn-sm btn-success' href='produto.php'>
+                        <a class='btn btn-sm btn-success' href='produto.php?id=$user_data[est_Id]'>
                             <svg xmlns='http://www.w3.org/2000/svg' width=16' height='16' fill='curretColor' class='bi bi-plus-circle' viewBox='0 0 16 16'>
                                 <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>
                                 <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/>
@@ -116,7 +134,7 @@
     });
 
     function searchData(){
-        window.location = 'listarprod.php?search='+search.value;
+        window.location = 'listarprod.php?idestab='+estabelecimento.value+'&search='+search.value;
     }
 </script>
 </html>

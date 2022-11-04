@@ -8,28 +8,32 @@ session_start();
         $estEmail = $_POST['estEmail'];
         $estSenha = $_POST['estSenha'];
 
+        
+
         // print_r('estEmail: ' . $estEmail);
         // print_r('<br>');
         // print_r('estSenha: ' . $estSenha);
 
         $sql = "SELECT * FROM estabelecimentos WHERE estEmail = '$estEmail' AND estSenha = '$estSenha'";
-
-        $result = $conn -> query($sql);
+        $res = mysqli_query($conn, $sql);
+             
+		$resultado = mysqli_fetch_array($res);
 
         // print_r($sql);
         // print_r('<br>');
         // print_r($result);
 
-        if(mysqli_num_rows($result) < 1){
+        if(mysqli_num_rows($res) < 1){
             // print_r('nao existe');
             unset($_SESSION['estEmail']);
             unset($_SESSION['estSenha']);
             header('Location: ../index.html');
         }else{
             // print_r('existe');
+            $_SESSION['idestab'] = $resultado['estId'];
             $_SESSION['estEmail'] = $estEmail;
             $_SESSION['estSenha'] = $estSenha;
-            header('Location: ../listarprod.php');
+            header('Location: ../listarprod.php?idestab='.$resultado['estId'].'');
         }
     }else{
         //nao acessa

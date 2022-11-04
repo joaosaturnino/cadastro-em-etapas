@@ -5,7 +5,8 @@ empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQU
 empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
 empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
 empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
-empty($_FILES["proImagem"])         ? $proImagem = ""         : $proImagem = $_FILES["proImagem"];
+empty($_REQUEST["est_Id"])    		? $est_Id = ""    		: $est_Id = $_REQUEST["est_Id"];
+empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FILES["proImagem"];
 
 	include("conexao.php");
 	// $id = $_GET['id'];
@@ -25,8 +26,8 @@ empty($_FILES["proImagem"])         ? $proImagem = ""         : $proImagem = $_F
 	// 	include("uploadest.php"); //neste ponto chama o arquivo para fazer o upload da foto
 	// }
 
-    $sql = "Insert Into produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao)".
-		"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."')";
+    $sql = "Insert Into produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao, est_Id)".
+		"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."','".$est_Id."')";
 		
 		$consulta = mysqli_query($conn, $sql);
 		$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
