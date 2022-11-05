@@ -77,7 +77,7 @@
                     <th scope="col">Tamanho</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Descrição</th>
-                    <!-- <th scope="col">Estabelecimento</th> -->
+                    <th scope="col">Estabelecimento</th>
                     <th scope="col">Editar</th>
                     <th scope="col">Excluir</th>
                     <th scope="col">Novo</th>
