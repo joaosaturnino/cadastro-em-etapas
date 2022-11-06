@@ -1,0 +1,31 @@
+body{
+    background-color: #2a2734;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+label{
+    width: 211px;
+    height: 34px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ff8870;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+input{
+    box-sizing: border-box;
+    width: 326px;
+    height: 35px;
+    background: #9ab6fd;
+    border: 1px solid #000000;
+    
+}
