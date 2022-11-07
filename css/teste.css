@@ -17,7 +17,7 @@ label{
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    color: #ff8870;
+    color: #ffb870;
     margin-top: 30px;
     margin-left: 10px;
 }
@@ -27,5 +27,68 @@ input{
     height: 35px;
     background: #9ab6fd;
     border: 1px solid #000000;
-    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    transition: all 0.5s;
+    padding-left: 5%;
+    color: white;
+}
+input:focus{
+    outline: none;
+    box-shadow: 0px 0px 15px #ffb870;
+}
+button{
+    display: none;
+    width: 40px;
+    height: 100%;
+    background: #9ab6fd;
+    border-radius: 25px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s;
+}
+button:hover{
+    box-shadow: 0px 0px 15px #ffb870;
+}
+.container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+.valid{
+    display: block;
+    animation: valid 1s forwards;
+}
+.fa-spinner{
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color: #ffb870;
+    animation: spin 2s infinite;
+}
+#check{
+    display: none;
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color: green;
+}
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360DEG);
+    }
+}
+@keyframes valid{
+    from{
+        width: 40px;
+    }
+    to{
+        width: 100px;
+    }
 }
