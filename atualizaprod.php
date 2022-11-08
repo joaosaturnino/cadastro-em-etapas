@@ -14,7 +14,7 @@
 
     include_once('./acoes/conexao.php');
 
-    $id = $_GET['id'];
+    $id = $_GET['id_prod'];
 
     $sqlSelect = "SELECT * FROM produtos WHERE proId=$id";
 
@@ -50,7 +50,7 @@
 <body>
 <header>BuscaFood®</header>
     <div class="box">
-      <form action="./acoes/saveEdit.php" method="POST">
+      <form action="./acoes/saveEdit.php?id_prod='.$id.'" method="POST">
         <fieldset>
           <legend><b>Atualização de Produtos</b></legend>
           <br>

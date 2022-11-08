@@ -1,5 +1,5 @@
 <?php
-  $id_estab = $_GET['id'];
+  $id_estab = $_GET['id_estab'];
   // if(isset($_POST['submit'])){
 
   //   // print_r('Produto: ' . $_POST['proNome']);
@@ -36,10 +36,11 @@
   <link rel="stylesheet" href="./css/produto.css">
 </head>
 <body>
-  <header>BuscaFood®</header>
+  <!-- <header>BuscaFood®</header> -->
   
     <div class="box">
-      <form action="./acoes/cadastropro.php?id=$codprod[proId]" method="post" enctype="multipart/form-data">
+      
+      <form action="./acoes/cadastropro.php?id_estab=<?php echo $id_estab?>" method="post" enctype="multipart/form-data">
         <fieldset>
           <legend><b>Cadastro de Produtos</b></legend>
           <br>
@@ -87,7 +88,7 @@
           <br>
           <div class="inputBox">
             <label>Descrição:</label>
-            <input type="text" name="proDescricao" id="proDescricao" class="inputProd" rows="5" required></input>
+            <input type="text" name="proDescricao" id="proDescricao" class="inputProd" required></input>
           </div>
           <br>
           <div class="inputBox">
@@ -99,7 +100,7 @@
           <!-- <button action="listarprod.php">Listar</button> -->
           <div class="button">
             <?php
-              echo '<a href="listarprod.php?idestab='.$id_estab.'">Produtos</a>'; ?>
+              echo '<a href="listarprod.php?id_estab='.$id_estab.'">Produtos</a>'; ?>
             </div>
         </fieldset>
       </form>

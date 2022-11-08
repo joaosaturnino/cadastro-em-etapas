@@ -1,12 +1,12 @@
 <?php
-$codest = $_GET['id'];
+$codest = $_GET['id_estab'];
 
 empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
 empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQUEST["proPreco"];
 empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
 empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
 empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
-empty($_REQUEST["est_Id"])    		? $est_Id = ""    		: $est_Id = $_REQUEST["est_Id"];
+// empty($_REQUEST["est_Id"])    		? $est_Id = ""    		: $est_Id = $_REQUEST["est_Id"];
 empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FILES["proImagem"];
 
 	include("conexao.php");
@@ -36,5 +36,5 @@ empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FIL
 
 	mysqli_close($conn); 
 
-	header("location:../produto.php?msg=Produto cadastrado com sucesso!");
+	header("location:../produto.php?id_estab=$codest");
 ?>

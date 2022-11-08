@@ -30,10 +30,10 @@ session_start();
             header('Location: ../index.html');
         }else{
             // print_r('existe');
-            $_SESSION['idestab'] = $resultado['estId'];
+            $_SESSION['id_estab'] = $resultado['estId'];
             $_SESSION['estEmail'] = $estEmail;
             $_SESSION['estSenha'] = $estSenha;
-            header('Location: ../listarprod.php?idestab='.$resultado['estId'].'');
+            header('Location: ../listarprod.php?id_estab='.$resultado['estId'].'');
         }
     }else{
         //nao acessa

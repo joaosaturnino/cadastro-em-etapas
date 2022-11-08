@@ -4,7 +4,7 @@
 
     if(isset($_POST['update'])){
 
-        $id = $_POST['id'];
+        $id = $_GET['id_prod'];
         $proNome = $_POST['proNome'];
         $proPreco = $_POST['proPreco'];
         $tam_Id = $_POST['tam_Id'];
