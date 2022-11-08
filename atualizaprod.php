@@ -24,7 +24,7 @@
     if($result -> num_rows > 0){
 
       while($user_data = mysqli_fetch_assoc($result)){
-        $id = $user_data['proId'];
+        // $id = $user_data['proId'];
         $proNome = $user_data['proNome'];
         $proPreco = $user_data['proPreco'];
         $tam_Id = $user_data['tam_Id'];
