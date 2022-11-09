@@ -1,9 +1,8 @@
 <?php
-    $id_estab = $_GET['id_estab'];
+
     include_once('conexao.php');
 
     if(isset($_POST['update'])){
-
         $id = $_GET['id_prod'];
         $proNome = $_POST['proNome'];
         $proPreco = $_POST['proPreco'];
@@ -14,9 +13,9 @@
         $sqlUpdate = "UPDATE produtos SET proNome='$proNome',proPreco='$proPreco',tam_Id='$tam_Id',cat_Id='$cat_Id',proDescricao='$proDescricao' WHERE proId='$id'";
 
         $result = $conn -> query($sqlUpdate);
-        print_r($result);
+
+        
     }
+    header('Location: ../listarprod.php?id_estab');
 
-
-    header("Location: ../listarprod.php?id_estab='.$id_estab.'");
 ?>

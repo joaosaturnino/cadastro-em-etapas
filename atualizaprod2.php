@@ -1,6 +1,6 @@
 <?php
 
-  if(!empty($_GET['id'])){
+  if(!empty($_GET['id_prod'])){
 
     // print_r('Produto: ' . $_POST['proNome']);
     // print_r('<br>');
@@ -14,29 +14,51 @@
 
     include_once('./acoes/conexao.php');
 
-    $id = $_GET['id_prod'];
+    $id_prod = $_GET['id_prod'];
 
-    $sqlSelect = "SELECT * FROM produtos WHERE proId=$id";
+    $sqlSelect = "SELECT * FROM produtos WHERE proId=$id_prod";
 
     $result = $conn -> query($sqlSelect);
 
-    print_r($result);
-    if($result -> num_rows > 0){
-
-      while($user_data = mysqli_fetch_assoc($result)){
-        // $id = $user_data['proId'];
-        $proNome = $user_data['proNome'];
-        $proPreco = $user_data['proPreco'];
-        $tam_Id = $user_data['tam_Id'];
-        $cat_Id = $user_data['cat_Id'];
-        $proDescricao = $user_data['proDescricao'];
-      }
-      // print_r($proNome);
+    if($result -> num_rows >0){
+        while($user_data = mysqli_fetch_assoc($result)){
+            $proNome = $user_data['proNome'];
+            $proPreco = $user_data['proPreco'];
+            $tam_Id = $user_data['tam_Id'];
+            $cat_Id = $user_data['cat_Id'];
+            $proDescricao = $user_data['proDescricao'];
+        }
+        // print_r($proNome);
+        
     }else{
-      header('Location: produto.php');
+        header('Location: listar.php');
     }
 
-  }
+    
+
+//     $id = $_GET['id_prod'];
+
+//     $sqlSelect = "SELECT * FROM produtos WHERE proId=$id";
+
+//     $result = $conn -> query($sqlSelect);
+
+//     // print_r($result);
+//     if($result -> num_rows > 0){
+
+//       while($user_data = mysqli_fetch_assoc($result)){
+//         // $id = $user_data['proId'];
+//         $proNome = $user_data['proNome'];
+//         $proPreco = $user_data['proPreco'];
+//         $tam_Id = $user_data['tam_Id'];
+//         $cat_Id = $user_data['cat_Id'];
+//         $proDescricao = $user_data['proDescricao'];
+//       }
+//       // print_r($proNome);
+//     }else{
+//       header('Location: produto.php');
+//     }
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,28 +70,28 @@
   <link rel="stylesheet" href="./css/atualiza.css">
 </head>
 <body>
-<header>BuscaFood®</header>
+<!-- <header>BuscaFood®</header> -->
     <div class="box">
-      <form action="./acoes/saveEdit.php?id_prod='.$id.'" method="POST">
+      <form action="./acoes/saveEdit.php?id_prod=<?php echo $id_prod?>" method="POST">
         <fieldset>
           <legend><b>Atualização de Produtos</b></legend>
           <br>
           <div class="inputBox">
-            <input type="text" name="proNome" id="proNome" class="inputProd" value="<?php echo $proNome?>" required>
+            <input type="text" name="proNome" id="proNome" class="inputProd" value="<?php echo $proNome ?>" required>
             <label class="labelInput">Produto:</label>
           </div>
           <br>
           <div class="inputBox">
-            <input type="text" name="proPreco" id="proPreco" class="inputProd" value="<?php echo $proPreco?>"  required>
+            <input type="text" name="proPreco" id="proPreco" class="inputProd" value="<?php echo $proPreco ?>" required>
             <label class="labelInput">Preço:</label>
           </div>
           <br>
           <p>Tamanho:</p>
-          <input type="radio" id="pequena" name="tam_Id" value="1" <?php echo ($tam_Id == '1') ? 'checked' : '' ?> required>
+          <input type="radio" id="pequena" name="tam_Id" value="1" <?php echo ($tam_Id == '1') ? 'checked' : ''?> required>
           <label for="pequena">Pequena</label>
-          <input type="radio" id="media" name="tam_Id" value="2" <?php echo ($tam_Id == '2') ? 'checked' : '' ?> required>
+          <input type="radio" id="media" name="tam_Id" value="2" <?php echo ($tam_Id == '2') ? 'checked' : ''?> required>
           <label for="media">Média</label>
-          <input type="radio" id="grande" name="tam_Id" value="3" <?php echo ($tam_Id == '3') ? 'checked' : '' ?> required>
+          <input type="radio" id="grande" name="tam_Id" value="3" <?php echo ($tam_Id == '3') ? 'checked' : ''?> required>
           <label for="grande">Grande</label>
           <!-- <select name="tam_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
@@ -80,13 +102,13 @@
           
           <br>
           <p>Categoria:</p>
-          <input type="radio" id="lanche" name="cat_Id" value="1" <?php echo ($cat_Id == '1') ? 'checked' : '' ?> required>
+          <input type="radio" id="lanche" name="cat_Id" value="1" <?php echo ($tam_Id == '1') ? 'checked' : ''?> required>
           <label for="lanche">Lanche</label>
-          <input type="radio" id="hot-dog" name="cat_Id" value="2" <?php echo ($cat_Id == '2') ? 'checked' : '' ?> required>
+          <input type="radio" id="hot-dog" name="cat_Id" value="2" <?php echo ($tam_Id == '2') ? 'checked' : ''?> required>
           <label for="hot-dog">Hot-Dog</label>
-          <input type="radio" id="porcao" name="cat_Id" value="3" <?php echo ($cat_Id == '3') ? 'checked' : '' ?> required>
+          <input type="radio" id="porcao" name="cat_Id" value="3" <?php echo ($tam_Id == '3') ? 'checked' : ''?> required>
           <label for="porcao">Porção</label>
-          <input type="radio" id="pizza" name="cat_Id" value="4" <?php echo ($cat_Id == '4') ? 'checked' : '' ?> required>
+          <input type="radio" id="pizza" name="cat_Id" value="4" <?php echo ($tam_Id == '4') ? 'checked' : ''?> required>
           <label for="pizza">Pizza</label>
           <!-- <select name="cat_Id" id="tipo-select">
                 <option value="" selected hidden disabled>Escolha uma opção</option>
@@ -98,7 +120,7 @@
           <br>
           <div class="inputBox">
             <label>Descrição:</label>
-            <input type="text" name="proDescricao" id="proDescricao" class="inputProd" rows="5" value="<?php echo $proDescricao?>"  required></input>
+            <input type="text" name="proDescricao" id="proDescricao" class="inputProd" value="<?php echo $proDescricao ?>"  required></input>
           </div>
           <br>
           <!-- <div class="inputBox">
