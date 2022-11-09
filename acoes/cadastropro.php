@@ -1,13 +1,13 @@
 <?php
-$codest = $_GET['id_estab'];
+	$codest = $_GET['id_estab'];
 
-empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
-empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQUEST["proPreco"];
-empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
-empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
-empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
-// empty($_REQUEST["est_Id"])    		? $est_Id = ""    		: $est_Id = $_REQUEST["est_Id"];
-empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FILES["proImagem"];
+	empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
+	empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQUEST["proPreco"];
+	empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
+	empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
+	empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
+	// empty($_REQUEST["est_Id"])    		? $est_Id = ""    		: $est_Id = $_REQUEST["est_Id"];
+	empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FILES["proImagem"];
 
 	include("conexao.php");
 	// $id = $_GET['id'];
@@ -15,7 +15,7 @@ empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FIL
 	// $resultado = mysqli_query($conn,$sql);
 	
 	// if (mysqli_num_rows($resultado) > 0) {
-		?><?php 
+		
 	// }
 	// else {
 	
@@ -34,7 +34,7 @@ empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FIL
 		$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
 		include("uploadprod.php"); //neste ponto chama o arquivo para fazer o upload da foto
 
-	mysqli_close($conn); 
+		mysqli_close($conn); 
 
-	header("location:../produto.php?id_estab=$codest");
+		header("location:../produto.php?id_estab=$codest");
 ?>

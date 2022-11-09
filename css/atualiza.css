@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    /* background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212); */
+    background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
 }
 header{
     padding: 30px 0;

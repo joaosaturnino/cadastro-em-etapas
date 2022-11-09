@@ -1,5 +1,6 @@
 <?php
 
+
   if(!empty($_GET['id_prod'])){
 
     // print_r('Produto: ' . $_POST['proNome']);
@@ -72,7 +73,7 @@
 <body>
 <!-- <header>BuscaFood®</header> -->
     <div class="box">
-      <form action="./acoes/saveEdit.php?id_prod=<?php echo $id_prod?>" method="POST">
+      <form action="./acoes/saveEdit2.php?id_prod=<?php echo $id_prod?>" method="POST">
         <fieldset>
           <legend><b>Atualização de Produtos</b></legend>
           <br>
@@ -93,13 +94,6 @@
           <label for="media">Média</label>
           <input type="radio" id="grande" name="tam_Id" value="3" <?php echo ($tam_Id == '3') ? 'checked' : ''?> required>
           <label for="grande">Grande</label>
-          <!-- <select name="tam_Id" id="tipo-select">
-                <option value="" selected hidden disabled>Escolha uma opção</option>
-                <option value="1">Pequena</option>   
-                <option value="2">Média</option>  
-                <option value="3">Grande</option>           
-              </select> -->
-          
           <br>
           <p>Categoria:</p>
           <input type="radio" id="lanche" name="cat_Id" value="1" <?php echo ($tam_Id == '1') ? 'checked' : ''?> required>
@@ -110,23 +104,11 @@
           <label for="porcao">Porção</label>
           <input type="radio" id="pizza" name="cat_Id" value="4" <?php echo ($tam_Id == '4') ? 'checked' : ''?> required>
           <label for="pizza">Pizza</label>
-          <!-- <select name="cat_Id" id="tipo-select">
-                <option value="" selected hidden disabled>Escolha uma opção</option>
-                <option value="1">Lanche</option>   
-                <option value="2">Hot-Dog</option>  
-                <option value="3">Porção</option> 
-                <option value="4">Pizza</option>              
-              </select> -->
           <br>
           <div class="inputBox">
             <label>Descrição:</label>
             <input type="text" name="proDescricao" id="proDescricao" class="inputProd" value="<?php echo $proDescricao ?>"  required></input>
           </div>
-          <br>
-          <!-- <div class="inputBox">
-            <label>Foto:</label>
-            <input type="file" name="proImagem" id="proImagem" class="inputProd">
-          </div> -->
           <br>
           <input type="hidden" name="id" value="<?php echo $id?>">
           <input type="submit" name="update" id="update" value="Atualizar">
