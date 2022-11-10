@@ -17,7 +17,7 @@
             // print_r($proNome);
             
         }else{
-            header('Location: listar.php');
+            header('Location: listar.php?id_estab='.$id_estab.'');
         }
     }
 ?>

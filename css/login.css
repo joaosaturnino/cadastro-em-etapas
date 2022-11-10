@@ -38,6 +38,7 @@ body{
     border-radius: 5px;
     outline: none;
     font-size: 15px;
+    margin: 10px;
   }
   .inputSubmit{
     width: 50%;
@@ -53,6 +54,7 @@ body{
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.5s ease;
+  margin: 10px;
   }
   .inputSubmit:hover{
     background: rgb(233, 218, 12);
