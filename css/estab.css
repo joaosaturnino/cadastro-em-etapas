@@ -14,17 +14,8 @@ body{
   overflow: hidden;
   background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
 }
-/* header{ */
-  /* padding: 30px 0;
-  text-align: center;
-  color: #fff; */
-  /* text-transform: uppercase; */
-  /* font-size: 22px;
-  letter-spacing: 3px;
-  background: black; */
-/* } */
- /* HEADER */
- .header {
+/* HEADER */
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -52,11 +43,8 @@ body{
   background: #f0b212;
 }
 .container{
-  /* margin-top: 10%;
-  margin-bottom: 5%; */
   max-width: 26%;
   max-height: 80%;
-  /* height: 100%; */
   background: #fff;
   text-align: center;
   border-radius: 5px;
@@ -69,14 +57,15 @@ body{
 }
 .container .form-outer{
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .container .form-outer form{
   display: flex;
   width: 500%;
 }
 .form-outer form .page{
-  width: 25%;
+  height: 100%;
+  width: 20%;
   transition: margin-left 0.3s ease-in-out;
 }
 .form-outer form .page .title{
@@ -85,39 +74,38 @@ body{
   font-weight: 500;
 }
 .form-outer form .page .field{
-  width: 330px;
   height: 25px;
-  margin: 35px 0;
+  margin: 2rem 0;
   display: flex;
   position: relative;
 }
 form .page .field .label{
   position: absolute;
-  top: -30px;
+  top: -1.5rem;
   font-weight: 500;
 }
 form .page .field input{
-  height: 100%;
-  width: 100%;
+  width: 310px;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding-left: 15px;
   font-size: 14px;
 }
 form .page .field select{
-  width: 100%;
+  width: 330px;
   padding-left: 10px;
   font-size: 17px;
   font-weight: 500;
 }
-
-form .button div,
-form .button input{
-  width: 50%;
-  height: calc(100% + 5px);
-  border: none;
+form .button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form .button div{
+  width: 40%;
   background: #f0b212;
-  margin-top: -20px;
+  margin: -20px 10px 0;
   border-radius: 5px;
   color: #000;
   cursor: pointer;
@@ -127,23 +115,21 @@ form .button input{
   text-transform: uppercase;
   transition: 0.5s ease;
 }
-form .page .field button:hover, 
-form .button:hover div,
-form .button:hover input
-
-{
+form .button div.firstNext{
+  width: 50%;
+  margin-right: 25%;
+}
+form .button div:hover{
   background: rgb(233, 218, 12);
 }
-form .page .btns button, 
 form .button div{
   margin-top: -20px!important;
 }
-form .page .btns button.prev, 
 form .button.prev div.prev{
   margin-right: 3px;
   font-size: 17px;
 }
-form .page .btns button.next, 
+
 form .button.next div.next{
   margin-left: 3px;
 }

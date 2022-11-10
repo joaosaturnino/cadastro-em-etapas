@@ -72,6 +72,9 @@
 </head>
 <body>
 <!-- <header>BuscaFood®</header> -->
+    <header class="header">
+        <a href="index.html" class="logo"><img src="./images/Logo.svg" alt=""></a>
+    </header>
     <div class="box">
       <form action="./acoes/saveEdit2.php?id_prod=<?php echo $id_prod?>" method="POST">
         <fieldset>

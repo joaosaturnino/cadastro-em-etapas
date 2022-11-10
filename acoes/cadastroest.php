@@ -35,5 +35,5 @@ empty($_REQUEST["estSenha"])        ? $estSenha = ""        : $estSenha = $_REQU
 
 	mysqli_close($conn); 
 
-	header("location:../produto.php?msg=Estabelecimento cadastrado com sucesso!");
+	header("location:../produto.php?id_estab=$codest");
 ?>

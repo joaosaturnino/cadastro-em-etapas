@@ -7,13 +7,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
-    <!-- <header>BuscaFood®</header> -->
-    <!-- <a href="index.html">Voltar</a> -->
-    <header class="header">
-      <a href="index.html" class="logo"><img src="./images/Logo.svg" alt=""></a>
-    </header>
     <div class="container">
-      <text>Cadastro</text>
+      <header>Cadastro</header>
       <div class="progress-bar">
         <div class="step">
           <p>Nome</p>
@@ -53,27 +48,24 @@
       </div>
       <div class="form-outer">
         <form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data">
-          <p>
-            <input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
-          </p>
-          <div class="page slide-page">
-            <div class="title">Informações básicas:</div>
-            <div class="field">
-              <div class="label">Estabelecimento:</div>
-              <input type="text" name="estNome" placeholder="Nome do estabelecimento">
+            <div class="page slide-page">
+                <div class="title">Informações básicas:</div>
+                <div class="field">
+                    <div class="label">Estabelecimento:</div>
+                    <input type="text" name="estNome" placeholder="Nome do estabelecimento">
+                </div>
+                <div class="field">
+                  <div class="label">CNPJ:</div>
+                  <input type="text" name="estDocumento" placeholder="Apenas números">
+                </div>
+                <div class="field">
+                  <div class="label">Logo:</div>
+                  <input type="file" name="estLogo">
+                </div>
+                <div class="button">
+                  <div class="firstNext next" style="margin-left: 5rem;">Próximo</div>
+                </div>
             </div>
-            <div class="field">
-              <div class="label">CNPJ:</div>
-              <input type="text" name="estDocumento" placeholder="Apenas números">
-            </div>
-            <div class="field">
-              <div class="label">Logo:</div>
-              <input type="file" name="estLogo">
-            </div>
-            <div class="button">
-              <div class="firstNext next" style="margin-left: 5rem;">Próximo</div>
-            </div>
-          </div>
 
           <div class="page">
             <div class="title">Informações de contato:</div>
@@ -100,7 +92,7 @@
               <div class="prev-1 prev">Anterior</div>
               <div class="next-1 next">Próximo</div>
             </div>
-          </div>
+          </div> <!--fechou-->
 
           <div class="page">
             <div class="title">Redes Sociais:</div>
@@ -112,11 +104,11 @@
               <div class="label">Instagran:</div>
               <input type="text" name="lnk_inst" placeholder="Link(opcional)">
             </div>
-            <div class="button">
+            <div class="button btns">
               <div class="prev-2 prev">Anterior</div>
               <div class="next-2 next">Próximo</div>
             </div>
-          </div>
+          </div><!--fechou-->
 
           <div class="page">
             <div class="title">App Delivery:</div>
@@ -136,7 +128,7 @@
               <div class="prev-3 prev">Anterior</div>
               <div class="next-3 next">Próximo</div>
             </div>
-          </div>
+          </div><!--fechou-->
 
           <div class="page">
             <div class="title">Detalhes de login:</div>
@@ -154,12 +146,13 @@
             <div class="button">
               <input type="submit" class="submit" name="btn_submit" value="Cadastrar">
             </div>
-          </div>
+          </div><!--fechou-->
           
-        </form>
-      </div>
-    </div>
-    <script src="./script/script2.js"></script>
+        </form> 
+      </div> <!--fechou form-outer-->
+    </div> <!--fechou container-->
+    
+    <script src="./script/script.js"></script>
 
   </body>
 </html>

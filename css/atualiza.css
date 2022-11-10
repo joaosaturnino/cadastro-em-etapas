@@ -6,20 +6,93 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
+    background-image: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
 }
-header{
-    padding: 30px 0;
-    text-align: center;
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    display: flex;
+    padding: 3rem 9%;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+  }
+  .header .navbar{
+    margin-left: 7rem;
+    display: flex;
+    align-self: center;
+  }
+  .header .icons {
+    font-size: 2.5rem;
+    cursor: pointer;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 22px;
-    letter-spacing: 3px;
-    background: black;
+  }
+  .header .icons:hover {
+    color: #F0B212;
+  }
+  .header #menu-btn {
+    display: none;
+  }
+  .header .navbar a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 2rem;
+  }
+  .header .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: #F0B212;
+  }
+  .header .navbar .space {
+    margin-left: 3rem;
+    display: inline-block;
+    width: 13rem;
+  }
+  .header .logo {
+    position: absolute;
+    top: 1.8rem;
+    margin-right: 3rem;
+    margin-bottom: 10px;
+  }
+  .header .logo img {
+    width: 15rem;
+  }
+  .header .search-form {
+    height: 7rem;
+    padding: 0 2rem;
+    border-top: 0.2rem solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    background: #000;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  
+  .header .search-form.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  .header .search-form input {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  .header .fa-times {
+    transform: rotate(180deg);
   }
 .box{
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgba(0, 0, 0, 0.8);
