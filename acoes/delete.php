@@ -1,5 +1,7 @@
 <?php
-  $id_estab = $_GET['id_estab'];
+  $id_estab = $_GET['id'];
+  
+
   if(!empty($_GET['id_prod'])){
 
     include_once('conexao.php');
@@ -17,5 +19,5 @@
     }
   }
 
-  header('Location: ../listarprod.php?id_estab=$id_estab');
+   header('Location: ../listarprod.php?id_estab_delete='.$id_estab.'');
 ?>

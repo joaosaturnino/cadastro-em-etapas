@@ -1,6 +1,6 @@
 <?php
 
-
+  $id = $_GET['id'];
   if(!empty($_GET['id_prod'])){
 
     // print_r('Produto: ' . $_POST['proNome']);

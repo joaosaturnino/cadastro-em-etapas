@@ -26,15 +26,16 @@ header{
   /* z-index: 1000; */
   background: #000;
   display: flex;
-  padding: 3rem 9%;
+  flex-direction: row;
+  padding: 2rem 9%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-header div#logout{
+/* header div#logout{
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 60px;
-}
+} */
 /* .header {
   position: fixed;
   top: 0;
@@ -48,7 +49,11 @@ header div#logout{
   justify-content: center; */
   /* gap: 1rem; */
 /* } */
-header div#logout button{
+header div#logout{
+  display: block;
+}
+header div#logout{
+  padding: 5px 10px;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -58,24 +63,77 @@ header div#logout button{
   border-radius: 2px;
   cursor: pointer;
   border: 1px solid;
-  /* box-shadow: 0 5px 10px rgba(0, 0, 0, .8); */
   background: #f0b212;
 }
+header div#logout a{
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
 .header .logo {
-  position: absolute;
-  top: 1.8rem;
-  margin-right: 3rem;
-  margin-bottom: 10px;
+  display: block;
 }
 .header .logo img {
-  width: 15rem;
+  width: 10rem;
 }
+.content{
+  padding: 0 9%;
+}
+#new{
+  margin-top: 1.5rem;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  background-color: rgb(3, 171, 34);
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+#new:hover{
+  background-color: rgb(3, 133, 27);
+}
+#new i{
+  position: absolute;
+  top: 6px;
+  left: calc(50% - 15px);
+  color: #fff;
+  font-size: 20px;
+  display: block;
+}
+#tabelaProd{
+  margin-top: 1.5rem;
+}
+#tabelaProd td, #tabelaProd th{
+  color: #fff;
+  text-align: center;
+  align-self: center;
+}
+#tabelaProd th{
+  color: #ffc107;
+}
+td.tamanhoMax{
+  max-width: 200px;
+}
+td p {
+  max-width: 200px;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow-x: hidden;
+}
+td img{
+  max-width: 100px;
+  max-height: 50px;
+}
+
 .table-bg{
     background: rgba(0, 0, 0, 0.5);
     /* background: white; */
     border-radius: 15px;
 }
 .box-search{
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   gap: .1%;
