@@ -1,6 +1,6 @@
 <?php
 
-$id_estab = $_POST['id']; //lê campo oculto
+    $id_estab = $_POST['id']; //lê campo oculto
 
     include_once('conexao.php');
     // $id_estab = $_GET['id_estab'];
