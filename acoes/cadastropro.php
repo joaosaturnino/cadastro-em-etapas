@@ -2,7 +2,7 @@
 	$codest = $_GET['id_estab'];
 
 	empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
-	empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = $_REQUEST["proPreco"];
+	empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = str_replace(",",".",$_REQUEST["proPreco"]);
 	empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];
 	empty($_REQUEST["cat_Id"])          ? $cat_Id = ""          : $cat_Id = $_REQUEST["cat_Id"];
 	empty($_REQUEST["proDescricao"])    ? $proDescricao = ""    : $proDescricao = $_REQUEST["proDescricao"];
