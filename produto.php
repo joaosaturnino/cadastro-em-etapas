@@ -66,27 +66,45 @@
             <label class="labelInput">Preço:</label>
           </div>
           <br>
-
-            <p>Tamanho:</p>
-            <input type="radio" id="pequena" name="tam_Id" value="1" required>
-            <label for="pequena">Pequena</label>
-            <input type="radio" id="media" name="tam_Id" value="2" required>
-            <label for="media">Média</label>
-            <input type="radio" id="grande" name="tam_Id" value="3" required>
-            <label for="grande">Grande</label>
-     
+          <div class="radioBtns">
+            <h4>Tamanho:</h4>
+            <ul class="btnsRadio">
+              <li>
+                <input type="radio" id="pequena" name="tam_Id" value="1" required>
+                <label for="pequena">Pequena</label>
+              </li>
+              <li>
+                <input type="radio" id="media" name="tam_Id" value="2" required>
+                <label for="media">Média</label>
+              </li>
+              <li>
+                <input type="radio" id="grande" name="tam_Id" value="3" required>
+                <label for="grande">Grande</label>
+              </li>
+            </ul>
+          </div>
           <br>
-
-            <p>Categoria:</p>
-            <input type="radio" id="lanche" name="cat_Id" value="1" required>
-            <label for="lanche">Lanche</label>
-            <input type="radio" id="hot-dog" name="cat_Id" value="2" required>
-            <label for="hot-dog">Hot-Dog</label>
-            <input type="radio" id="porcao" name="cat_Id" value="3" required>
-            <label for="porcao">Porção</label>
-            <input type="radio" id="pizza" name="cat_Id" value="4" required>
-            <label for="pizza">Pizza</label>
-
+          <div class="radioBtns">
+            <h4>Categoria:</h4>
+            <ul class="btnsRadio">
+              <li>
+                <input type="radio" id="lanche" name="cat_Id" value="1" required>
+                <label for="lanche">Lanche</label>
+              </li>
+              <li>
+                <input type="radio" id="hot-dog" name="cat_Id" value="2" required>
+                <label for="hot-dog">Hot-Dog</label>
+              </li>
+              <li>
+                <input type="radio" id="porcao" name="cat_Id" value="3" required>
+                <label for="porcao">Porção</label>
+              </li>
+              <li>
+                <input type="radio" id="pizza" name="cat_Id" value="4" required>
+                <label for="pizza">Pizza</label>
+              </li>
+            </ul>
+          </div>
           <br>
 
           <div class="inputBox">
@@ -102,11 +120,6 @@
           <br>
 
           <input type="submit" name="submit" id="submit" value="Cadastrar">
-          <!-- <button action="listarprod.php">Listar</button> -->
-          <!-- <div class="button"> -->
-            <?php
-              // echo '<a href="listarprod.php?id_estab='.$id_estab.'">Produtos</a>'; ?>
-            <!-- </div> -->
         </fieldset>
       </form>
     </div>
