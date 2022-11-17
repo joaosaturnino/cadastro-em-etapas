@@ -103,10 +103,10 @@
 
           <input type="submit" name="submit" id="submit" value="Cadastrar">
           <!-- <button action="listarprod.php">Listar</button> -->
-          <div class="button">
+          <!-- <div class="button"> -->
             <?php
-              echo '<a href="listarprod.php?id_estab='.$id_estab.'">Produtos</a>'; ?>
-            </div>
+              // echo '<a href="listarprod.php?id_estab='.$id_estab.'">Produtos</a>'; ?>
+            <!-- </div> -->
         </fieldset>
       </form>
     </div>
