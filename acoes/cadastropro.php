@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$codest = $_GET['id_estab'];
 
 	empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];

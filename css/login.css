@@ -31,12 +31,10 @@ body{
   
   .header .logo {
     position: absolute;
-    top: 1.8rem;
-    margin-right: 3rem;
-    margin-bottom: 10px;
+    top: 1rem;
   }
   .header .logo img {
-    width: 15rem;
+    width: 13rem;
   }
   
   div{
