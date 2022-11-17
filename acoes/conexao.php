@@ -14,7 +14,7 @@ $bd = 'buscateste3';
     else
     {
         
-        print('Erro! Conexão não realizada!');
+        print('Erro! Conexão não realizada!PArou aqui durante o teste');
     }
 
 ?>
