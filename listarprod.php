@@ -107,7 +107,7 @@
                 <table class="table text-black table-bg">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
+                            <!-- <th scope="col">ID</th> -->
                             <th scope="col">Produto</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Tamanho</th>
@@ -122,11 +122,11 @@
                         <?php
                             while($user_data = mysqli_fetch_array($result)){
                                 echo "<tr>";
-                                echo "<td id='idProd'>".$user_data['proId'].
+                                // echo "<td id='idProd'>".$user_data['proId'].
                                    '<input type="hidden" id="produto" value="'.$user_data['proId'].'">';
                                     "</td>";
                                 echo "<td class='tamanhoMax''><p>".$user_data['proNome']."</p></td>";
-                                echo "<td>".$user_data['proPreco']."</td>";
+                                echo "<td>R$ ".$user_data['proPreco']."</td>";
                                 echo "<td>".$user_data['tamNome']."</td>";
                                 echo "<td>".$user_data['catNome']."</td>";
                                 echo "<td class='tamanhoMax';'><p>".$user_data['proDescricao']."</p></td>";
