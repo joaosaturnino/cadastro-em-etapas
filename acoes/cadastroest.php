@@ -1,4 +1,5 @@
 <?php
+	session_start();
 $id_estab = $_GET['id'];
 
 empty($_REQUEST["estNome"])         ? $estNome = ""         : $estNome = $_REQUEST["estNome"];
