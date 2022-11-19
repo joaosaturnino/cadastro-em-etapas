@@ -74,7 +74,7 @@
       <!-- <header>BuscaFood®</header> -->
       <header class="header">
         <div>
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
               <img src="./images/Logo.svg" alt="">
             </a>
         </div>
