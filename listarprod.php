@@ -32,7 +32,7 @@
             ON ct.catId = p.cat_Id
             WHERE p.est_Id = '$id_estab'  
             AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
-            ORDER BY proId ASC, cat_Id";
+            ORDER BY proNome ASC, cat_Id, tam_Id ASC";
             //   echo $sql;
             // echo "<br>";
             // echo "contem algo, pesquisar";
@@ -47,7 +47,7 @@
                     INNER JOIN categorias ct
                     ON ct.catId = p.cat_Id
                     WHERE p.est_Id = ".$id_estab."
-                    ORDER BY proId ASC, cat_Id";
+                    ORDER BY proNome ASC, cat_Id, tam_Id ASC";
         }
         // $sql = "SELECT * FROM produtos ORDER BY proId ASC";
 
