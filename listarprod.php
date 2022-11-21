@@ -131,7 +131,7 @@
                                 echo "<td>".$user_data['tamNome']."</td>";
                                 echo "<td>".$user_data['catNome']."</td>";
                                 echo "<td class='tamanhoMax';'><p>".$user_data['proDescricao']."</p></td>";
-                                echo "<td><img style='max-width: 100px; max-height: 50px;' src='./images/produtos/".$user_data['proImagem']."'></td>";
+                                echo "<td><img style='width: 75px; height: 100px;' src='./images/produtos/".$user_data['proImagem']."'></td>";
                                 echo "<td>
                                     <a class='btn btn-sm btn-warning' href='atualizaprod2.php?id_prod=".$user_data['proId']."&id=".$id_estab."'>
                                     <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>
