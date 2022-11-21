@@ -121,19 +121,19 @@
             <h4>Categoria:</h4>
             <ul class="btnsRadio">
               <li>
-                <input type="radio" id="lanche" name="cat_Id" value="1" <?php echo ($tam_Id == '1') ? 'checked' : ''?> required>
+                <input type="radio" id="lanche" name="cat_Id" value="1" <?php echo ($cat_Id == '1') ? 'checked' : ''?> required>
                 <label for="lanche">Lanche</label>
               </li>
               <li>
-                <input type="radio" id="hot-dog" name="cat_Id" value="2" <?php echo ($tam_Id == '2') ? 'checked' : ''?> required>
+                <input type="radio" id="hot-dog" name="cat_Id" value="2" <?php echo ($cat_Id== '2') ? 'checked' : ''?> required>
                 <label for="hot-dog">Hot-Dog</label>
               </li>
               <li>
-                <input type="radio" id="porcao" name="cat_Id" value="3" <?php echo ($tam_Id == '3') ? 'checked' : ''?> required>
+                <input type="radio" id="porcao" name="cat_Id" value="3" <?php echo ($cat_Id == '3') ? 'checked' : ''?> required>
                 <label for="porcao">Porção</label>
               </li>
               <li>
-                <input type="radio" id="pizza" name="cat_Id" value="4" <?php echo ($tam_Id == '4') ? 'checked' : ''?> required>
+                <input type="radio" id="pizza" name="cat_Id" value="4" <?php echo ($cat_Id == '4') ? 'checked' : ''?> required>
                 <label for="pizza">Pizza</label>
               </li>
             </ul>
