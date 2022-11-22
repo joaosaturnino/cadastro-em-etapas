@@ -24,15 +24,15 @@
             $data = $_GET['search'];
 
             $sql = "SELECT * FROM produtos p
-            INNER JOIN estabelecimentos e
-            ON e.estId = p.est_Id
-            INNER JOIN tamanhos t
-            ON t.tamId = p.tam_Id
-            INNER JOIN categorias ct
-            ON ct.catId = p.cat_Id
-            WHERE p.est_Id = '$id_estab'  
-            AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
-            ORDER BY proNome ASC, cat_Id, tam_Id ASC";
+                INNER JOIN estabelecimentos e
+                ON e.estId = p.est_Id
+                INNER JOIN tamanhos t
+                ON t.tamId = p.tam_Id
+                INNER JOIN categorias ct
+                ON ct.catId = p.cat_Id
+                WHERE p.est_Id = '$id_estab'  
+                AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
+                ORDER BY proNome ASC, cat_Id, tam_Id asc";
             //   echo $sql;
             // echo "<br>";
             // echo "contem algo, pesquisar";
@@ -47,11 +47,12 @@
                     INNER JOIN categorias ct
                     ON ct.catId = p.cat_Id
                     WHERE p.est_Id = ".$id_estab."
-                    ORDER BY proNome ASC, cat_Id, tam_Id ASC";
+                    ORDER BY proNome ASC, cat_Id, tam_Id asc";
         }
         // $sql = "SELECT * FROM produtos ORDER BY proId ASC";
 
         $result = mysqli_query($conn, $sql);
+        $campo = mysqli_fetch_array($result);
 
         // print_r($result);
     }
@@ -90,13 +91,18 @@
                 <input type="search" class="form-control w=25" placeholder="Pesquisar" id="pesquisar">
                 <?php echo'<input type="hidden" id="estabelecimento" value="'.$id_estab.'">';  ?>
                 <button onclick="searchData()" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
             </div>
 
-            <a style="display: inline-block; text-decoration: none;" href="produto.php?id_estab=<?php echo $id_estab?>">
+            <div class="loja-header">
+                <h1><?php echo $campo["estNome"] ?></h1>
+                <img src="./images/estabelecimentos/<?php echo $campo["estLogo"] ?>" alt="">
+            </div>
+
+            <a style="display: block; width: 200px; text-decoration: none;" href="produto.php?id_estab=<?php echo $id_estab?>">
                 <div id="new">
                     <i class="fa-solid fa-plus"></i> <br>
                     Adicionar Novo
@@ -113,6 +119,7 @@
                             <th scope="col">Tamanho</th>
                             <th scope="col">Categoria</th>
                             <th scope="col">Descrição</th>
+                            <th scope="col">Atualização</th>
                             <th scope="col">Imagem</th>
                             <th scope="col">Editar</th>
                             <th scope="col">Excluir</th>
@@ -131,7 +138,8 @@
                                 echo "<td>".$user_data['tamNome']."</td>";
                                 echo "<td>".$user_data['catNome']."</td>";
                                 echo "<td class='tamanhoMax';'><p>".$user_data['proDescricao']."</p></td>";
-                                echo "<td><img style='width: 75px; height: 100px;' src='./images/produtos/".$user_data['proImagem']."'></td>";
+                                echo "<td>".$user_data['proAtualizacao']."</td>";
+                                echo "<td><img style='width: 100px; height: 50px;' src='./images/produtos/".$user_data['proImagem']."'></td>";
                                 echo "<td>
                                     <a class='btn btn-sm btn-warning' href='atualizaprod2.php?id_prod=".$user_data['proId']."&id=".$id_estab."'>
                                     <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-square' viewBox='0 0 16 16'>
