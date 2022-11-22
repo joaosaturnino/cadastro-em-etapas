@@ -1,4 +1,5 @@
 <?php
+	session_start();
 
 	if( empty($_FILES['estLogo']) ){
 		echo "Parou aqui"; //se nao houver fotos na interface

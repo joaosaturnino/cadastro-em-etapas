@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     $id_estab = $_POST['id']; //lê campo oculto
 

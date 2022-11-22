@@ -1,5 +1,5 @@
 <?php
-
+  session_start();
   $id = $_GET['id'];
   if(!empty($_GET['id_prod'])){
 
