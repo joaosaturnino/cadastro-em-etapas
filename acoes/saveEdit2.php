@@ -14,7 +14,7 @@
         $proDescricao = $_POST['proDescricao'];
         // $id_estab = $_GET['id_estab'];
 
-        $sqlUpdate = "UPDATE produtos SET proNome='$proNome',proPreco='$proPreco',tam_Id='$tam_Id',cat_Id='$cat_Id',proDescricao='$proDescricao' 
+        $sqlUpdate = "UPDATE produtos SET proNome='$proNome',proPreco='$proPreco',tam_Id='$tam_Id',cat_Id='$cat_Id',proDescricao='$proDescricao',proAtualizacao=CURDATE()
         WHERE proId='$proId'";
 
         $result = $conn -> query($sqlUpdate);

@@ -13,6 +13,7 @@
     // echo '<script>alert("'.$id_estab.'")</script>';
     // $id_estab_delete = @$_GET['id_estab_delete'];//parametro qdo retorna do delete
     
+    
 
     if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true)){
         unset($_SESSION['estEmail']);
@@ -33,6 +34,8 @@
                 WHERE p.est_Id = '$id_estab'  
                 AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
                 ORDER BY proNome ASC, cat_Id, tam_Id asc";
+
+            $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
             //   echo $sql;
             // echo "<br>";
             // echo "contem algo, pesquisar";
@@ -48,11 +51,24 @@
                     ON ct.catId = p.cat_Id
                     WHERE p.est_Id = ".$id_estab."
                     ORDER BY proNome ASC, cat_Id, tam_Id asc";
+
+            // $sql = "SELECT * FROM produtos WHERE proId = '$id_estab'";
+
+            $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
+
+            // $sql2 = "SELECT DATE_FORMAT(proAtualizacao, '%d/%m/%Y')
+            // FROM produtos";
         }
         // $sql = "SELECT * FROM produtos ORDER BY proId ASC";
 
         $result = mysqli_query($conn, $sql);
-        $campo = mysqli_fetch_array($result);
+        // $campo = mysqli_fetch_array($result);
+
+        $result1 = mysqli_query($conn,$sql1);
+        $campo1 = mysqli_fetch_array($result1);
+
+        // $result2 = mysqli_query($conn,$sql2);
+        // $campo2 = mysqli_fetch_array($result2);
 
         // print_r($result);
     }
@@ -98,8 +114,8 @@
             </div>
 
             <div class="loja-header">
-                <h1><?php echo $campo["estNome"] ?></h1>
-                <img src="./images/estabelecimentos/<?php echo $campo["estLogo"] ?>" alt="">
+                <h1><?php echo $campo1["estNome"] ?></h1>
+                <img src="./images/estabelecimentos/<?php echo $campo1["estLogo"] ?>" alt="">
             </div>
 
             <a style="display: block; width: 200px; text-decoration: none;" href="produto.php?id_estab=<?php echo $id_estab?>">
@@ -113,7 +129,7 @@
                 <table class="table text-black table-bg">
                     <thead>
                         <tr>
-                            <!-- <th scope="col">ID</th> -->
+                            <th scope="col">ID</th>
                             <th scope="col">Produto</th>
                             <th scope="col">Preço</th>
                             <th scope="col">Tamanho</th>
@@ -130,7 +146,7 @@
                         <?php
                             while($user_data = mysqli_fetch_array($result)){
                                 echo "<tr>";
-                                // echo "<td id='idProd'>".$user_data['proId'].
+                                echo "<td id='idProd'>".$user_data['proId'].
                                    '<input type="hidden" id="produto" value="'.$user_data['proId'].'">';
                                     "</td>";
                                 echo "<td class='tamanhoMax''><p>".$user_data['proNome']."</p></td>";
