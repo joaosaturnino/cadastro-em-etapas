@@ -12,7 +12,7 @@ body{
     /* min-height: 100vh; */
     height: 100vh;
     overflow: hidden;
-    background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
+    /* background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212); */
   }
     /* HEADER */
   .header {
