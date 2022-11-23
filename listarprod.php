@@ -15,7 +15,7 @@
     
     
 
-    if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true)){
+    if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true) and (!isset($_SESSION['estId']) == true )){
         unset($_SESSION['estEmail']);
         unset($_SESSION['estSenha']);
         header('Location: index.html');
