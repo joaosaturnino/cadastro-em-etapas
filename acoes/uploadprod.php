@@ -6,7 +6,7 @@
 		$proImagem = null;
 	}else{ 
 		$proImagem = $_FILES['proImagem']; //sen�o, l� a foto e joga na variavel
-		}
+	}
 
 	if(!empty($proImagem["tmp_name"])) {
 		$nome_arquivo = "prod".$codprod.".jpg"; //o nome do arquivo(prod+codproduto.jpg)
@@ -14,8 +14,8 @@
 		echo "Parou aqui";
 		$consulta = mysqli_query($conn, $sql); //executa o sql
 		echo "Parou aqui";
-		
-		if (is_uploaded_file($proImagem["tmp_name"])){ //faz o upload, se ok
+			
+		if(is_uploaded_file($proImagem["tmp_name"])){ //faz o upload, se ok
 			move_uploaded_file($proImagem["tmp_name"],"../images/produtos/".$nome_arquivo); //move para a pasta fotos
 		}
 		else{
@@ -23,5 +23,5 @@
 		}
 	}
 
-	mysqli_close($conn);
+	
 ?>

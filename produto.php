@@ -1,53 +1,28 @@
 <?php
   session_start();
   $id_estab = $_GET['id_estab'];
-  // if(isset($_POST['submit'])){
-
-  //   // print_r('Produto: ' . $_POST['proNome']);
-  //   // print_r('<br>');
-  //   // print_r('Preço: ' . $_POST['proPreco']);
-  //   // print_r('<br>');
-  //   // print_r('Tamanho: ' . $_POST['tam_Id']);
-  //   // print_r('<br>');
-  //   // print_r('Categoria: ' . $_POST['cat_Id']);
-  //   // print_r('<br');
-  //   // print_r('Descrição: ' . $_POST['proDescricao']);
-
-  //   include_once('./acoes/conexao.php');
-
-  //   $proNome = $_POST['proNome'];
-  //   $proPreco = $_POST['proPreco'];
-  //   $tam_Id = $_POST['tam_Id'];
-  //   $cat_Id = $_POST['cat_Id'];
-  //   $proDescricao = $_POST['proDescricao'];
-  //   // $est_Id = $_POST['est_Id'];
-  //   // $proImagem = $_FILES['proImagem'];
-
-  //   $result = mysqli_query($conn, "INSERT INTO produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao) 
-  //   VALUES ('$proNome','$proPreco','$tam_Id','$cat_Id','$proDescricao')");
-  // }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BuscaFood®</title>
-  <link rel="stylesheet" href="./css/produto.css">
-</head>
-<body>
-  <!-- <header>BuscaFood®</header> -->
-  <header class="header">
-    <div>
-        <a href="../index.html" class="logo">
-          <img src="./images/Logo.svg" alt="">
-        </a>
-    </div>
-    <div id="logout" >
-      <?php echo '<a href="listarprod.php?id_estab='.$id_estab.'">Cancelar</a>'; ?>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuscaFood®</title>
+    <link rel="stylesheet" href="./css/produto.css">
+  </head>
+  <body>
+    
+    <header class="header">
+      <div>
+          <a href="../index.html" class="logo">
+            <img src="./images/Logo.svg" alt="">
+          </a>
+      </div>
+      <div id="logout" >
+        <?php echo '<a href="listarprod.php?id_estab='.$id_estab.'">Cancelar</a>'; ?>
+      </div>
+    </header>
 
     <div class="box">
       <form action="./acoes/cadastropro.php?id_estab=<?php echo $id_estab?>" method="post" enctype="multipart/form-data">
@@ -123,5 +98,5 @@
         </fieldset>
       </form>
     </div>
-</body>
+  </body>
 </html>

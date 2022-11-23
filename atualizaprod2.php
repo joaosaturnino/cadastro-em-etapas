@@ -3,16 +3,6 @@
   $id = $_GET['id'];
   if(!empty($_GET['id_prod'])){
 
-    // print_r('Produto: ' . $_POST['proNome']);
-    // print_r('<br>');
-    // print_r('Preço: ' . $_POST['proPreco']);
-    // print_r('<br>');
-    // print_r('Tamanho: ' . $_POST['tam_Id']);
-    // print_r('<br>');
-    // print_r('Categoria: ' . $_POST['cat_Id']);
-    // print_r('<br');
-    // print_r('Descrição: ' . $_POST['proDescricao']);
-
     include_once('./acoes/conexao.php');
 
     $id_prod = $_GET['id_prod'];
@@ -22,44 +12,18 @@
     $result = $conn -> query($sqlSelect);
 
     if($result -> num_rows >0){
-        while($user_data = mysqli_fetch_assoc($result)){
-            $proNome = $user_data['proNome'];
-            $proPreco = $user_data['proPreco'];
-            $tam_Id = $user_data['tam_Id'];
-            $cat_Id = $user_data['cat_Id'];
-            $proDescricao = $user_data['proDescricao'];
-        }
-        // print_r($proNome);
-        
+      while($user_data = mysqli_fetch_assoc($result)){
+        $proNome = $user_data['proNome'];
+        $proPreco = $user_data['proPreco'];
+        $tam_Id = $user_data['tam_Id'];
+        $cat_Id = $user_data['cat_Id'];
+        $proDescricao = $user_data['proDescricao'];
+
+      }
     }else{
-        header('Location: listar.php');
+    header('Location: listar.php');
     }
-
-    
-
-//     $id = $_GET['id_prod'];
-
-//     $sqlSelect = "SELECT * FROM produtos WHERE proId=$id";
-
-//     $result = $conn -> query($sqlSelect);
-
-//     // print_r($result);
-//     if($result -> num_rows > 0){
-
-//       while($user_data = mysqli_fetch_assoc($result)){
-//         // $id = $user_data['proId'];
-//         $proNome = $user_data['proNome'];
-//         $proPreco = $user_data['proPreco'];
-//         $tam_Id = $user_data['tam_Id'];
-//         $cat_Id = $user_data['cat_Id'];
-//         $proDescricao = $user_data['proDescricao'];
-//       }
-//       // print_r($proNome);
-//     }else{
-//       header('Location: produto.php');
-//     }
-
-}
+  }
 ?>
 <!DOCTYPE html>
   <html lang="pt-br">
@@ -71,12 +35,12 @@
       <link rel="stylesheet" href="./css/produto.css">
     </head>
     <body>
-      <!-- <header>BuscaFood®</header> -->
+      
       <header class="header">
         <div>
-            <a href="../index.html" class="logo">
-              <img src="./images/Logo.svg" alt="">
-            </a>
+          <a href="../index.html" class="logo">
+            <img src="./images/Logo.svg" alt="">
+          </a>
         </div>
         <div id="logout" >
           <?php echo '<a href="listarprod.php?id_estab='.$id.'">Cancelar</a>'; ?>

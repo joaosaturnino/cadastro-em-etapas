@@ -1,7 +1,6 @@
 <?php
     session_start();
     include_once('./acoes/conexao.php');
-    // print_r($_SESSION);
     
     if(!is_null(@$_GET['id_estab'])){
         $id_estab = $_GET['id_estab'];
@@ -9,11 +8,6 @@
     else if(!is_null(@$_GET['id_estab_delete'])){
         $id_estab = $_GET['id_estab_delete'];
     }
-
-    // echo '<script>alert("'.$id_estab.'")</script>';
-    // $id_estab_delete = @$_GET['id_estab_delete'];//parametro qdo retorna do delete
-    
-    
 
     if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true) and (!isset($_SESSION['estId']) == true )){
         unset($_SESSION['estEmail']);
@@ -36,43 +30,28 @@
                 ORDER BY cat_Id, proNome ASC, tam_Id asc";
 
             $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
-            //   echo $sql;
-            // echo "<br>";
-            // echo "contem algo, pesquisar";
         }
         else{
-            // echo "não temos nada, trazer todos os registros";
+        
             $sql = "SELECT p.proId, p.proNome, p.proPreco, t.tamNome, ct.catNome, p.proDescricao, date_format(p.proAtualizacao, '%d  %b.  %Y') as dataAtualizacao, p.proImagem FROM produtos p
-                    INNER JOIN estabelecimentos e
-                    ON e.estId = p.est_Id
-                    INNER JOIN tamanhos t
-                    ON t.tamId = p.tam_Id
-                    INNER JOIN categorias ct
-                    ON ct.catId = p.cat_Id
-                    WHERE p.est_Id = ".$id_estab."
-                    ORDER BY cat_Id, proNome ASC, tam_Id asc";
-
-            // $sql = "SELECT * FROM produtos WHERE proId = '$id_estab'";
+                INNER JOIN estabelecimentos e
+                ON e.estId = p.est_Id
+                INNER JOIN tamanhos t
+                ON t.tamId = p.tam_Id
+                INNER JOIN categorias ct
+                ON ct.catId = p.cat_Id
+                WHERE p.est_Id = ".$id_estab."
+                ORDER BY cat_Id, proNome ASC, tam_Id asc";
 
             $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
 
-            // $sql2 = "SELECT DATE_FORMAT(proAtualizacao, '%d/%m/%Y')
-            // FROM produtos";
         }
-        // $sql = "SELECT * FROM produtos ORDER BY proId ASC";
 
         $result = mysqli_query($conn, $sql);
-        // $campo = mysqli_fetch_array($result);
 
         $result1 = mysqli_query($conn,$sql1);
         $campo1 = mysqli_fetch_assoc($result1);
 
-        mysqli_close($conn);
-
-        // $result2 = mysqli_query($conn,$sql2);
-        // $campo2 = mysqli_fetch_array($result2);
-
-        // print_r($result);
     }
 
 ?>
@@ -188,9 +167,9 @@
                 </table>
             </div>
         </div>
-        </body>
+    </body>
         
-    <script> //script do campo de busca
+    <script> //script do campo de busca e alert de congirmação de exclusao
         var search = document.getElementById('pesquisar');
        
         var idEstab = document.getElementById('estabelecimento').value;
@@ -212,6 +191,6 @@
             }
         }
 
-        </script>
+    </script>
           
 </html>

@@ -7,7 +7,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
-    
+    <!-- <header>BuscaFood®</header> -->
+    <!-- <a href="index.html">Voltar</a> -->
     <header class="header">
       <a href="../index.html" class="logo"><img src="./images/Logo.svg" alt=""></a>
     </header>
@@ -51,7 +52,7 @@
           </div>
         </div>
         <div class="form-outer">
-          <form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data">
+          <form method="post" action="./acoes/atualizaestab.php" enctype="multipart/form-data">
             <p>
               <input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
             </p>
@@ -151,7 +152,8 @@
                 <div class="prev-4 prev">Anterior</div>
               </div>
               <div class="button">
-                <input type="submit" class="submit" id="submit" name="btn_submit" value="Cadastrar">
+                <input type="hidden" name="id" value="<?php echo $id?>">
+                <input type="submit" name="update" id="submit" value="Atualizar">
               </div>
             </div>
             
