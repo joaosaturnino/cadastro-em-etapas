@@ -14,6 +14,39 @@ body{
   overflow: hidden;
   background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
 }
+/* header{ */
+  /* padding: 30px 0;
+  text-align: center;
+  color: #fff; */
+  /* text-transform: uppercase; */
+  /* font-size: 22px;
+  letter-spacing: 3px;
+  background: black; */
+/* } */
+ /* HEADER */
+ .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  padding: 3rem 9%;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+}
+
+.header .logo {
+  position: absolute;
+  top: 1.8rem;
+  margin-right: 3rem;
+  margin-bottom: 10px;
+}
+.header .logo img {
+  width: 15rem;
+}
 ::selection{
   color: #000;
   background: #f0b212;
@@ -29,7 +62,7 @@ body{
   border-radius: 5px;
   padding: 20px 35px 15px 35px;
 }
-.container header{
+.container text{
   font-size: 30px;
   font-weight: 600;
   margin: 0 0 30px 0;
@@ -77,8 +110,9 @@ form .page .field select{
   font-size: 17px;
   font-weight: 500;
 }
-form .page .field button, 
-form .button div{
+
+form .button div,
+form .button input{
   width: 50%;
   height: calc(100% + 5px);
   border: none;
@@ -94,7 +128,10 @@ form .button div{
   transition: 0.5s ease;
 }
 form .page .field button:hover, 
-form .button:hover div{
+form .button:hover div,
+form .button:hover input
+
+{
   background: rgb(233, 218, 12);
 }
 form .page .btns button, 

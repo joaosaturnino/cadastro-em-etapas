@@ -14,10 +14,34 @@ body{
     overflow: hidden;
     background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212);
   }
+    /* HEADER */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #000;
+    display: flex;
+    padding: 3rem 9%;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1rem; */
+  }
+  
+  .header .logo {
+    position: absolute;
+    top: 1rem;
+  }
+  .header .logo img {
+    width: 13rem;
+  }
+  
   div{
+    /* margin-top: 20px; */
     background-color: #fff;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 80px;
@@ -29,6 +53,7 @@ body{
     border-radius: 5px;
     outline: none;
     font-size: 15px;
+    margin: 10px;
   }
   .inputSubmit{
     width: 50%;
@@ -44,6 +69,7 @@ body{
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: 0.5s ease;
+  margin: 10px;
   }
   .inputSubmit:hover{
     background: rgb(233, 218, 12);
