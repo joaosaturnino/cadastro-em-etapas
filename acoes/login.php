@@ -39,5 +39,6 @@
         //nao acessa
         header('Location: ../index.html');
     }
+    mysqli_close($conn);
 
 ?>

@@ -67,6 +67,8 @@
         $result1 = mysqli_query($conn,$sql1);
         $campo1 = mysqli_fetch_assoc($result1);
 
+        mysqli_close($conn);
+
         // $result2 = mysqli_query($conn,$sql2);
         // $campo2 = mysqli_fetch_array($result2);
 
@@ -205,12 +207,10 @@
 
         function apaga(idProd){
             if (confirm("Você deseja mesmo apagar este produto?")) {
-                // alert('Apagado com sucesso!')
+                alert('Apagado com sucesso!')
                 location.href = './acoes/delete.php?id_prod='+idProd+'&id='+idEstab
             }
         }
-
-    
 
         </script>
           

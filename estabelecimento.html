@@ -64,7 +64,7 @@
               </div>
               <div class="field">
                 <div class="label">CNPJ:</div>
-                <input type="text" id="estDocumento" name="estDocumento" placeholder="Apenas números">
+                <input type="text" id="estDocumento" name="estDocumento" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="14" placeholder="Apenas números">
               </div>
               <div class="field">
                 <div class="label">Logo:</div>

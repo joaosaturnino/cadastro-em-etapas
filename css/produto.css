@@ -127,3 +127,23 @@ legend{
 #submit:hover{
   background: rgb(233, 218, 12);
 }
+
+/* teste de botao */
+
+a {
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+a span {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-family: arial;
+}

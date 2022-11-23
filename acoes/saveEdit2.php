@@ -20,6 +20,7 @@
 
         $result = $conn -> query($sqlUpdate);
 
+        mysqli_close($conn);
         // echo $id_estab;
         header("Location: ../listarprod.php?id_estab=".$id_estab."");
     }

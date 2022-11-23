@@ -19,6 +19,8 @@
         }
       }
 
+      mysqli_close($conn);
+
       header('Location: ../listarprod.php?id_estab_delete='.$id_estab.'');
    
    

@@ -20,4 +20,6 @@
 			echo "erro ao fazer upload.<br>";
 		}
 	}
+
+	mysqli_close($conn);
 ?>
