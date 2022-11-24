@@ -55,21 +55,21 @@ header div#logout:hover a{
   top: 55%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
   padding: 10px 12px;
   border-radius: 15px;
   width: 30%;
-  color: white;
+  color: #696969;
 }
-fieldset{
+/* fieldset{
   border: 3px solid #f0b212;
   padding: .5rem;
-}
+} */
 legend{
-  border: 1px solid #f0b212;
+  /* border: 1px solid #f0b212; */
   padding: 4px 8px;
   text-align: center;
-  background-color: #f0b212;
+  /* background-color: #f0b212; */
   border-radius: 8px; 
 }
 .inputBox{
@@ -78,11 +78,12 @@ legend{
 .inputProd{
   background: none;
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  border: 1px solid #696969;
+  color: black;
   font-size: 15px;
   width: 100%;
   letter-spacing: 2px;
+  border-radius: 4px;
 }
 .labelInput{
   position: absolute;
@@ -118,7 +119,7 @@ legend{
   width: 100%;
   border: none;
   padding: 8px 0;
-  color: white;
+  color: black;
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;

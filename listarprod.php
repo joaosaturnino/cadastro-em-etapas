@@ -43,7 +43,10 @@
                 WHERE p.est_Id = ".$id_estab."
                 ORDER BY cat_Id, proNome ASC, tam_Id asc";
 
-            $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
+            $sql1 = "SELECT e.estNome, e.estLogo, c.cidNome, c.ufSigla FROM estabelecimentos e
+            Inner JOIN cidades c
+            ON e.cid_Id = c.cidId 
+            WHERE estId = '$id_estab'";
 
         }
 
@@ -95,7 +98,10 @@
             </div>
 
             <div class="loja-header">
-                <h1><?php echo $campo1["estNome"] ?></h1>
+                <h1><?php echo $campo1["estNome"]?>
+                    <!-- <br> -->
+                    <!-- <?php echo $campo1["cidNome"]?>-<?php echo $campo1["ufSigla"]?> -->
+                </h1>
                 <img src="./images/estabelecimentos/<?php echo $campo1["estLogo"] ?>" alt="">
             </div>
 
@@ -186,7 +192,7 @@
 
         function apaga(idProd){
             if (confirm("Você deseja mesmo apagar este produto?")) {
-                alert('Apagado com sucesso!')
+                // alert('Apagado com sucesso!')
                 location.href = './acoes/delete.php?id_prod='+idProd+'&id='+idEstab
             }
         }

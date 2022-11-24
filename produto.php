@@ -26,7 +26,7 @@
 
     <div class="box">
       <form action="./acoes/cadastropro.php?id_estab=<?php echo $id_estab?>" method="post" enctype="multipart/form-data">
-        <fieldset>
+        <!-- <fieldset> -->
           <legend><b>Cadastro de Produtos</b></legend>
           <br>
 
@@ -95,7 +95,7 @@
           <br>
 
           <input type="submit" name="submit" id="submit" value="Cadastrar">
-        </fieldset>
+        <!-- </fieldset> -->
       </form>
     </div>
   </body>

@@ -12,13 +12,12 @@ body{
   /* min-height: 100vh; */
   height: 100vh;
   overflow: hidden;
-  /* background: url("./images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212); */
 }
 ::selection{
   color: #000;
   background: #f0b212;
 }
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -28,15 +27,58 @@ body{
   display: flex;
   padding: 2rem 9%;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   /* gap: 1rem; */
-}
+/* }
 .header .logo {
   position: absolute;
   top: .5rem;
 }
 .header .logo img {
   width: 10rem;
+} */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  padding: 1rem 9%;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 1rem; */
+}
+.header .logo img {
+  width: 10rem;
+}
+    
+header div#logout{
+  display: block;
+  padding: 7px 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #BDBFBF;
+  transition: .5s;
+}
+header div#logout a{
+  text-decoration: none;
+  color: #BDBFBF;
+  font-weight: 700;
+  transition: .5s;
+}
+header div#logout:hover{
+  background-color: #BDBFBF;
+  transition: .5s;
+}
+header div#logout:hover a{
+  color: #000;
+  transition: .5s;
 }
 .container{
   margin-top: 4rem;
