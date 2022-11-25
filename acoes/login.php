@@ -7,7 +7,7 @@
         $estEmail = $_POST['estEmail'];
         $estSenha = $_POST['estSenha'];
 
-        $sql = "SELECT * FROM estabelecimentos WHERE estEmail = '$estEmail' AND estSenha = '$estSenha'";
+        $sql = "SELECT * FROM estabelecimentos WHERE estEmail = '$estEmail' AND estSenha = MD5('$estSenha')";
         $res = mysqli_query($conn, $sql);
                 
         $resultado = mysqli_fetch_array($res);
