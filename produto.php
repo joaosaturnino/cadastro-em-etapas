@@ -83,8 +83,9 @@
           <br>
 
           <div class="inputBox">
-            <label>Descrição:</label>
+            <!-- <label>Descrição:</label> -->
             <input type="text" name="proDescricao" id="proDescricao" class="inputProd" required></input>
+            <label class="labelInput">Descrição:</label>
           </div>
           <br>
 

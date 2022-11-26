@@ -14,20 +14,20 @@
   z-index: 1000;
   background: #000;
   display: flex;
-  padding: 1rem 9%;
+  padding: 3rem 9%;
   align-items: center;
   justify-content: space-between;
   /* gap: 1rem; */
 }
 .header .logo img {
-  width: 10rem;
+  width: 15rem;
 }
     
 header div#logout{
   display: block;
-  padding: 7px 14px;
+  padding: 10px 20px;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 10px;
@@ -40,6 +40,7 @@ header div#logout a{
   color: #BDBFBF;
   font-weight: 700;
   transition: .5s;
+  padding: 10px 15px;
 }
 header div#logout:hover{
   background-color: #BDBFBF;
@@ -60,6 +61,7 @@ header div#logout:hover a{
   border-radius: 15px;
   width: 30%;
   color: #696969;
+  border: 1px solid black;
 }
 /* fieldset{
   border: 3px solid #f0b212;
@@ -71,6 +73,7 @@ legend{
   text-align: center;
   /* background-color: #f0b212; */
   border-radius: 8px; 
+  font-size: 50px;
 }
 .inputBox{
   position: relative;
@@ -80,7 +83,7 @@ legend{
   border: none;
   border: 1px solid #696969;
   color: black;
-  font-size: 15px;
+  font-size: 25px;
   width: 100%;
   letter-spacing: 2px;
   border-radius: 4px;
@@ -92,11 +95,12 @@ legend{
   pointer-events: none;
   font-weight: 700;
   transition: .5px;
+  font-size: 25px;
 }
 .inputProd:focus ~ .labelInput,
 .inputProd:valid ~.labelInput{
   top: -20px;
-  font-size: 12px;
+  font-size: 17px;
 }
 .radioBtns{
   display: flex;
@@ -120,11 +124,17 @@ legend{
   border: none;
   padding: 8px 0;
   color: black;
-  font-size: 14px;
+  font-size: 25px;
   font-weight: 700;
   cursor: pointer;
   border-radius: 10px;
 }
 #submit:hover{
   background: rgb(233, 218, 12);
+}
+h4{
+  font-size: 25px;
+}
+label{
+  font-size: 25px;
 }
