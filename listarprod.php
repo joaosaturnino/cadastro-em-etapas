@@ -100,7 +100,7 @@
             <div class="loja-header">
                 <h1><?php echo $campo1["estNome"]?>
                     <br>
-                    <?php echo $campo1["cidNome"]?>-<?php echo $campo1["ufSigla"]?>
+                    <!-- <?php echo $campo1["cidNome"]?>-<?php echo $campo1["ufSigla"]?> -->
                 </h1>
                 <img src="./images/estabelecimentos/<?php echo $campo1["estLogo"] ?>" alt="">
             </div>
