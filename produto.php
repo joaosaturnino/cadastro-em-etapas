@@ -11,8 +11,7 @@
     <title>BuscaFood®</title>
     <link rel="stylesheet" href="./css/produto.css">
   </head>
-  <body>
-    
+  <body> 
     <header class="header">
       <div>
           <a href="../index.html" class="logo">

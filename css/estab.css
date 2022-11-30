@@ -25,13 +25,13 @@ body{
   z-index: 1000;
   background: #000;
   display: flex;
-  padding: 3rem 9%;
+  padding: 2rem 7%;
   align-items: center;
   justify-content: space-between;
   /* gap: 1rem; */
 }
 .header .logo img {
-  width: 15rem;
+  width: 8rem;
 }
     
 header div#logout{
@@ -247,4 +247,7 @@ form .button.next div.next{
 .progress-bar .step .check.active{
   display: block;
   color: #000;
+}
+.text{
+  font-size: 50px;
 }
