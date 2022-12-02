@@ -1,6 +1,6 @@
 body {
   background-color: #ffffff;
-  color: #444444;
+  color: #323232;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -8,21 +8,54 @@ body {
   padding: 0;
 }
 .wizard-content-left {
-  background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.45);
-  background-image: url(../images/blog-2.jpg);
+  background-blend-mode: overlay;
+  background-color: #323232;
+  background-image: url(../images/blog-3.jpg);
   background-position: center center;
   background-size: cover;
   height: 100vh;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
 }
+.wizard-content-left .img-logo{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.wizard-content-left img{
+  width: 550px;
+  box-shadow: 7px 5px 19px -6px rgba(0,0,0,0.7);
+  padding: 10px 20px;
+  border-radius: 40px 0 40px 0;
+  margin-bottom: 140px;
+
+}
+
+
 .wizard-content-left h1 {
-  color: #ffffff;
-  font-size: 38px;
+  color: #ebebeb;
+  font-size: 25px;
   font-weight: 600;
-  padding: 12px 20px;
-  text-align: center;
+  text-align: end;
 }
+.wizard-content-left  h3{
+  font-weight: 900;
+  border-bottom: #f0b212 3px solid;
+  width: 180px;
+  display: flex;
+  color: #f0b212;
+}
+.wizard-content-left .text-bg{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 30px;
+  margin-top: 30px;
+}
+
 
 .form-wizard {
   margin-top: 200px;
@@ -95,6 +128,17 @@ body {
   min-width: 120px;
   padding: 10px;
   text-align: center;
+  border-radius: 8px 0px;
+  box-shadow: 5px 5px 12px -6px rgba(1,0,0,0.5);
+}
+.submit{
+  border: none;
+  box-shadow: 5px 5px 12px -6px rgba(1,0,0,0.5);
+}
+.submit:hover{
+  transition: 0.80s;
+  scale: 1.2;
+  
 }
 .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
   color: #ffffff;

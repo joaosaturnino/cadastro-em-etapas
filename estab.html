@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Cadastro BuscaFood</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><link rel="stylesheet" href="./css/style.css">
+	<meta charset="UTF-8">
+	<title>Cadastro BuscaFood</title>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data" class="wizard-section">
-		
-        <input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
 
-    <div class="row no-gutters">
+<body>
+	<!-- partial:index.partial.html -->
+	<form method="post" action="./acoes/cadastroest.php" enctype="multipart/form-data" class="wizard-section">
+
+		<input type="hidden" name="codprod" value="<?php echo $codprod; ?>">
+
+		<div class="row no-gutters">
 			<div class="col-lg-6 col-md-6">
-				<div class="wizard-content-left d-flex justify-content-center align-items-center">
-					<h1>Cadastre Seu Estabelecimento!</h1>
+				<div class="wizard-content-left ">
+					<div class="text-bg">
+						<h3>Bem Vindo!</h3>
+						<h1>Cadastre Seu Estabelecimento!</h1>
+					</div>
+					<div class="img-logo">
+						<img src="./images/Logo.svg" alt="">
+					</div>
 				</div>
 			</div>
 			<div class="col-lg-6 col-md-6">
@@ -73,7 +82,7 @@
 							<div class="form-group clearfix">
 								<a href="javascript:;" class="form-wizard-next-btn float-right">Próximo</a>
 							</div>
-						</fieldset>	
+						</fieldset>
 
 						<!-- Endereço -->
 						<fieldset class="wizard-fieldset">
@@ -85,17 +94,17 @@
 							</div>
 							<div class="form-group">
 								<select class="form-control " name="cid_Id" id="username">
-                  <option value="" selected hidden disabled>Cidade</option>
-                  <option value="3304">Arco-Íris-SP</option> 
-                  <option value="3331">Bastos-SP</option>
-                  <option value="3483">Herculândia-SP</option>
-                  <option value="3487">Iacri-SP</option>
-                  <option value="3714">Pompeia-SP</option>
-                  <option value="3736">Quata-SP</option>
-                  <option value="3737">Queiroz-SP</option>
-                  <option value="3739">Quintana-SP</option>
-                  <option value="3884">Tupã-SP</option>                   
-                </select>
+									<option value="" selected hidden disabled>Cidade</option>
+									<option value="3304">Arco-Íris-SP</option>
+									<option value="3331">Bastos-SP</option>
+									<option value="3483">Herculândia-SP</option>
+									<option value="3487">Iacri-SP</option>
+									<option value="3714">Pompeia-SP</option>
+									<option value="3736">Quata-SP</option>
+									<option value="3737">Queiroz-SP</option>
+									<option value="3739">Quintana-SP</option>
+									<option value="3884">Tupã-SP</option>
+								</select>
 								<!-- <label for="username" class="wizard-form-text-label">Cidade*</label> -->
 								<!-- <input type="text" class="form-control " id="username"> -->
 								<div class="wizard-form-error"></div>
@@ -115,7 +124,7 @@
 								<a href="javascript:;" class="form-wizard-previous-btn float-left">Voltar</a>
 								<a href="javascript:;" class="form-wizard-next-btn float-right">Próximo</a>
 							</div>
-						</fieldset>	
+						</fieldset>
 
 						<!-- Redese Social -->
 						<fieldset class="wizard-fieldset">
@@ -144,7 +153,7 @@
 								<a href="javascript:;" class="form-wizard-previous-btn float-left">Voltar</a>
 								<a href="javascript:;" class="form-wizard-next-btn float-right">Próximo</a>
 							</div>
-						</fieldset>	
+						</fieldset>
 
 						<!-- Lojas -->
 						<fieldset class="wizard-fieldset">
@@ -284,14 +293,16 @@
 								<a href="javascript:;" class="form-wizard-previous-btn float-left">Voltar</a>
 								<input type="submit" href="javascript:;" class="form-wizard-submit float-right submit" id="submit" name="btn_submit" value="Cadastrar"></a>
 							</div>
-						</fieldset>	
+						</fieldset>
 					</form>
 				</div>
 			</div>
 		</div>
-</form>
-<!-- partial -->
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script/script.js"></script>
+	</form>
+	<!-- partial -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src="./script/script.js"></script>
 
 </body>
+
 </html>
