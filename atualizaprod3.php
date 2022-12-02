@@ -47,7 +47,7 @@
       </header>
     <div class="container">
         <div class="form-image">
-            <img src="./images/blog-3.jpg">
+            <img src="./images/logo_ulti.png">
         </div>  
         <div class="form">
         <form action="./acoes/saveEdit2.php?id_prod=<?php echo $id_prod?>" method="POST">
@@ -128,7 +128,8 @@
                     </div>
                 </div>
 
-                <input type="submit" name="submit" id="submit" value="Cadastrar">
+                <input type="hidden" name="id" value="<?php echo $id?>">
+                <input type="submit" name="update" id="submit" value="Atualizar">
             </form>
         </div>
     </div>

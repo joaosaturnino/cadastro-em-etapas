@@ -6,6 +6,7 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
 }
 .wizard-content-left {
   background-blend-mode: overlay;
@@ -58,7 +59,7 @@ body {
 
 
 .form-wizard {
-  margin-top: 200px;
+  margin-top: 100px;
   color: #888888;
   padding: 30px;
 }
@@ -120,7 +121,8 @@ body {
   text-align: center;
   margin-bottom: 1px;
 }
-.form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+.form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, 
+.form-wizard .form-wizard-submit {
   background-color: #f0b212;
   color: #ffffff;
   display: inline-block;
@@ -140,7 +142,9 @@ body {
   scale: 1.2;
   
 }
-.form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+.form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, 
+.form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, 
+.form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
   color: #ffffff;
   opacity: 0.6;
   text-decoration: none;
