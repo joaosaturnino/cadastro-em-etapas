@@ -12,13 +12,13 @@
         $tam_Id = $_POST['tam_Id'];
         $cat_Id = $_POST['cat_Id'];
         $proDescricao = $_POST['proDescricao'];
-
+                //atualiza os dados do produto vindo do form
         $sqlUpdate = "UPDATE produtos SET proNome='$proNome',proPreco='$proPreco',tam_Id='$tam_Id',cat_Id='$cat_Id',proDescricao='$proDescricao',proAtualizacao=CURDATE()
         WHERE proId='$proId'";
 
         $result = $conn -> query($sqlUpdate);
 
-        header("Location: ../listarprod.php?id_estab=".$id_estab."");
+        header("Location: ../listarprod.php?id_estab=".$id_estab."");//redireciona para a tela de listagem
     }
     
 

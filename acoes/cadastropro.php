@@ -10,7 +10,7 @@
 	empty($_FILES["proImagem"])         ? $proImagem = ""       : $proImagem = $_FILES["proImagem"];
 
 	include("conexao.php");
-
+					//inserção dos dados vindo do formulario
 	$sql = "Insert Into produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao,proAtualizacao,est_Id)".
 	"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."',
 	CURDATE(),'".$codest."')";
@@ -20,5 +20,5 @@
 	include("uploadprod.php"); //neste ponto chama o arquivo para fazer o upload da foto
 
 
-	header("location:../produto.php?id_estab=$codest");
+	header("location:../teste.php?id_estab=$codest"); //redireciona para um novo cadastro de produto
 ?>

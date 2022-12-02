@@ -18,6 +18,8 @@
 	empty($_REQUEST["estSenha"])        ? $estSenha = ""        : $estSenha = $_REQUEST["estSenha"];
 
 	include("conexao.php");
+
+			//Select para verificar se o estabelecimento jánão está cadastrado
 	$sql = "Select * from estabelecimentos where estNome = '".$estNome."'";
 	$resultado = mysqli_query($conn,$sql);
 	
@@ -25,7 +27,7 @@
 		?> <script>	alert("Estabelecimento já cadastrado"); </script> <?php 
 	}
 	else {
-		
+				//Inserção dos dados vindo do formulario
 		$sql = "Insert Into estabelecimentos(estNome,estDocumento,estEndereco,cid_Id,estTelefone,
 		estWhatsapp,lnk_face,lnk_inst,lnk_ifood,lnk_much,lnk_aiqfome,estEmail,estSenha) ".
 		"values ('".$estNome. "','" .$estDocumento. "','".$estEndereco."','".$cid_Id."','".$estTelefone."',
@@ -37,5 +39,5 @@
 		include("uploadest.php"); //neste ponto chama o arquivo para fazer o upload da foto
 	}
 
-	header("location:../produto.php?id_estab=$codest");
+	header("location:../teste.php?id_estab=$codest"); //redireciona para o cadastro de produto
 ?>
