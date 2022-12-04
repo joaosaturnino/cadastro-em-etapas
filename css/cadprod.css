@@ -21,12 +21,10 @@ body{
     left: 0;
     right: 0;
     z-index: 1000;
-    /* background: #000; */
     display: flex;
     padding: 2rem 7%;
     align-items: center;
     justify-content: space-between;
-    /* gap: 1rem; */
   }
   .header .logo img {
     width: 8rem;

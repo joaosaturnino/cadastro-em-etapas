@@ -9,15 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/cadprod.css">
-    <title>Cadastro Produto BuscaFood®</title>
+    <title>Cadastro Produto - BuscaFood®</title>
 </head>
 <body>
 <header class="header">
-      <!-- <div>
-          <a href="../index.html" class="logo">
-            <img src="./images/Logo.svg" alt="">
-          </a>
-      </div> -->
+    
       <div id="logout" >
         <?php echo '<a href="listarprod.php?id_estab='.$id_estab.'">Cancelar</a>'; ?>
       </div>

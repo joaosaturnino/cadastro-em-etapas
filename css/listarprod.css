@@ -20,25 +20,15 @@ html::-webkit-scrollbar-thumb {
 body{
     color:white;
     align-items: center;
-    /* background: url("../images/bg.png"), -webkit-linear-gradient(bottom, #000, #f0b212); */
 }
 p{
   margin: 0;
 }
-/* header{
-  padding: 30px 0;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 22px;
-  letter-spacing: 3px;
-  background: black;
-} */
+
 header{
   top: 0;
   left: 0;
   right: 0;
-  /* z-index: 1000; */
   background: #000;
   display: flex;
   flex-direction: row;
@@ -46,24 +36,7 @@ header{
   align-items: center;
   justify-content: space-between;
 }
-/* header div#logout{
-  position: absolute;
-  right: 2px;
-  top: 60px;
-} */
-/* .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: #000;
-  display: flex;
-  padding: 3rem 9%;
-  align-items: center;
-  justify-content: center; */
-  /* gap: 1rem; */
-/* } */
+
 header div#logout{
   display: block;
 }
@@ -171,7 +144,6 @@ td img{
 }
 
 .table-bg{
-    /* background: rgba(0, 0, 0, 0.3); */
     background: white;
     border-radius: 15px;
 }

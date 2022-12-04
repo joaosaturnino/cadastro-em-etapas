@@ -12,8 +12,8 @@
 	include("conexao.php");
 					//inserção dos dados vindo do formulario
 	$sql = "Insert Into produtos(proNome,proPreco,tam_Id,cat_Id,proDescricao,proAtualizacao,est_Id)".
-	"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."',
-	CURDATE(),'".$codest."')";
+			"values ('".$proNome. "','" .$proPreco. "','".$tam_Id."','".$cat_Id."','".$proDescricao."',
+			CURDATE(),'".$codest."')";
 			
 	$consulta = mysqli_query($conn, $sql);
 	$codprod = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)

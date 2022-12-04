@@ -29,10 +29,10 @@
 	else {
 				//Inserção dos dados vindo do formulario
 		$sql = "Insert Into estabelecimentos(estNome,estDocumento,estEndereco,cid_Id,estTelefone,
-		estWhatsapp,lnk_face,lnk_inst,lnk_ifood,lnk_much,lnk_aiqfome,estEmail,estSenha) ".
-		"values ('".$estNome. "','" .$estDocumento. "','".$estEndereco."','".$cid_Id."','".$estTelefone."',
-		'".$estWhatsapp."','".$lnk_face."','".$lnk_inst."','".$lnk_ifood."','".$lnk_much."',
-		'".$lnk_aiqfome."','".$estEmail."',MD5('".$estSenha."'))";
+				estWhatsapp,lnk_face,lnk_inst,lnk_ifood,lnk_much,lnk_aiqfome,estEmail,estSenha) ".
+				"values ('".$estNome. "','" .$estDocumento. "','".$estEndereco."','".$cid_Id."',
+				'".$estTelefone."','".$estWhatsapp."','".$lnk_face."','".$lnk_inst."','".$lnk_ifood."',
+				'".$lnk_much."','".$lnk_aiqfome."','".$estEmail."',MD5('".$estSenha."'))";
 			
 		$consulta = mysqli_query($conn, $sql);
 		$codest = mysqli_insert_id($conn); //pega o campo chave da tabela (vai ser usado em upload)
