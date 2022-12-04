@@ -150,6 +150,7 @@ body{
 .radio-input{
     display: flex;
     align-items: center;
+    accent-color: #f0b212;
 }
 
 .radio-input input{
@@ -161,6 +162,10 @@ body{
     color: #f0b212;
     font-weight: 700;
 }
+
+/* .radio-input input{
+    accent-color: #f0b212;
+  } */
 
 #submit{
     background:#f0b212;
