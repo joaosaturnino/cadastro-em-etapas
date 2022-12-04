@@ -4,10 +4,10 @@
 // $senha = '';
 // $bd = 'buscateste3';
 
-$host = '10.67.22.216';
-$usuario = 's221_tcc_g1_us';
-$senha = 'delv220809';
-$bd = 's221_tcc_g1_bd';
+    $host = "127.0.0.1";
+    $usuario = "root";
+    $senha = "";
+    $bd = "busca_food";
 
     $conn = @mysqli_connect ($host, $usuario, $senha, $bd);
 
@@ -17,7 +17,6 @@ $bd = 's221_tcc_g1_bd';
     }
     else
     {
-        
         print('Erro! Conexão não realizada!');
     }
 

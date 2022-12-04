@@ -24,7 +24,7 @@
     </header>
     <div class="container">
         <div class="form-image">
-            <img src="./images/logo_ulti.png">
+            <img src="./images/Logo.svg">
         </div>  
         <div class="form">
         <form action="./acoes/cadastropro.php?id_estab=<?php echo $id_estab?>" method="post" enctype="multipart/form-data">

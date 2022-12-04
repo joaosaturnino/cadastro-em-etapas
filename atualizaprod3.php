@@ -47,7 +47,7 @@
       </header>
     <div class="container">
         <div class="form-image">
-            <img src="./images/logo_ulti.png">
+            <img src="./images/Logo.svg">
         </div>  
         <div class="form">
         <form action="./acoes/saveEdit2.php?id_prod=<?php echo $id_prod?>" method="POST">
