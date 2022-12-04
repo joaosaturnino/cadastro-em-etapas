@@ -6,7 +6,38 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+}
+
+.form-wizard .form-wizard-header header div#logout{
+  display: block;
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #BDBFBF;
+  transition: .5s;
+  width: 25%;
+  margin-left: 70%;
+  margin-top: -18%;
+  margin-bottom: 5%;
+}
+.form-wizard .form-wizard-header header div#logout a{
+  text-decoration: none;
+  color: #BDBFBF;
+  font-weight: 700;
+  transition: .5s;
+}
+.form-wizard .form-wizard-header header div#logout:hover{
+  background-color: #BDBFBF;
+  transition: .5s;
+}
+.form-wizard .form-wizard-header header div#logout:hover a{
+  color: #000;
+  transition: .5s;
 }
 .wizard-content-left {
   background-blend-mode: overlay;

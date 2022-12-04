@@ -39,5 +39,5 @@
 		include("uploadest.php"); //neste ponto chama o arquivo para fazer o upload da foto
 	}
 
-	header("location:../teste.php?id_estab=$codest"); //redireciona para o cadastro de produto
+	header("location:../cadprod.php?id_estab=$codest"); //redireciona para o cadastro de produto
 ?>
