@@ -6,7 +6,7 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 .form-wizard .form-wizard-header header div#logout{
