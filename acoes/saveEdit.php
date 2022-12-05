@@ -5,7 +5,7 @@
 
     include_once('conexao.php');
 
-    if(isset($_POST['update'])){
+    if(isset($_POST['update'])){//recebe as informaçoes vindo do form
         $proId = $_GET['id_prod'];
         $proNome = $_POST['proNome'];
         $proPreco = $_POST['proPreco'];

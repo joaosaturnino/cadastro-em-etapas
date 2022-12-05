@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$codest = $_GET['id_estab'];
-
+			//recebe as informaçoes vindo do form
 	empty($_REQUEST["proNome"])         ? $proNome = ""         : $proNome = $_REQUEST["proNome"];
 	empty($_REQUEST["proPreco"])        ? $proPreco = ""        : $proPreco = str_replace(",",".",$_REQUEST["proPreco"]);
 	empty($_REQUEST["tam_Id"])          ? $tam_Id = ""          : $tam_Id = $_REQUEST["tam_Id"];

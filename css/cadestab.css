@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   outline: none;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   background-color: #ffffff;
   color: #323232;
@@ -32,20 +34,24 @@ body {
   margin-top: -18%;
   margin-bottom: 5%;
 }
+
 .form-wizard .form-wizard-header header div#logout a{
   text-decoration: none;
   color: #BDBFBF;
   font-weight: 700;
   transition: .5s;
 }
+
 .form-wizard .form-wizard-header header div#logout:hover{
   background-color: #BDBFBF;
   transition: .5s;
 }
+
 .form-wizard .form-wizard-header header div#logout:hover a{
   color: #000;
   transition: .5s;
 }
+
 .wizard-content-left {
   background-blend-mode: overlay;
   background-color: #323232;
@@ -57,6 +63,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .wizard-content-left .img-logo{
   height: 100vh;
   display: flex;
@@ -64,6 +71,7 @@ body {
   justify-content: center;
   
 }
+
 .wizard-content-left img{
   width: 550px;
   box-shadow: 7px 5px 19px -6px rgba(0,0,0,0.7);
@@ -73,13 +81,13 @@ body {
 
 }
 
-
 .wizard-content-left h1 {
   color: #ebebeb;
   font-size: 25px;
   font-weight: 600;
   text-align: end;
 }
+
 .wizard-content-left  h3{
   font-weight: 900;
   border-bottom: #f0b212 3px solid;
@@ -87,6 +95,7 @@ body {
   display: flex;
   color: #f0b212;
 }
+
 .wizard-content-left .text-bg{
   display: flex;
   flex-direction: column;
@@ -95,17 +104,18 @@ body {
   margin-top: 30px;
 }
 
-
 .form-wizard {
   margin-top: 100px;
   color: #888888;
   padding: 30px;
 }
+
 .form-wizard .wizard-form-radio {
   display: inline-block;
   margin-left: 5px;
   position: relative;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -121,12 +131,15 @@ body {
   position: relative;
   cursor: pointer;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"]:focus {
   outline: 0;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"]:checked {
   background-color: #f0b212;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"]:checked::before {
   content: "";
   position: absolute;
@@ -140,6 +153,7 @@ body {
   margin: 0 auto;
   top: 8px;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"]:checked::after {
   content: "";
   display: inline-block;
@@ -151,14 +165,17 @@ body {
   z-index: 100;
   border-radius: 50%;
 }
+
 .form-wizard .wizard-form-radio input[type="radio"] ~ label {
   padding-left: 10px;
   cursor: pointer;
 }
+
 .form-wizard .form-wizard-header {
   text-align: center;
   margin-bottom: 1px;
 }
+
 .form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, 
 .form-wizard .form-wizard-submit {
   background-color: #f0b212;
@@ -171,15 +188,17 @@ body {
   border-radius: 8px 0px;
   box-shadow: 5px 5px 12px -6px rgba(1,0,0,0.5);
 }
+
 .submit{
   border: none;
   box-shadow: 5px 5px 12px -6px rgba(1,0,0,0.5);
 }
+
 .submit:hover{
   transition: 0.80s;
   scale: 1.2;
-  
 }
+
 .form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, 
 .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, 
 .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
@@ -187,12 +206,15 @@ body {
   opacity: 0.6;
   text-decoration: none;
 }
+
 .form-wizard .wizard-fieldset {
   display: none;
 }
+
 .form-wizard .wizard-fieldset.show {
   display: block;
 }
+
 .form-wizard .wizard-form-error {
   display: none;
   background-color: #d70b0b;
@@ -212,38 +234,46 @@ body {
   background-color: #f1f1f1;
   border: none;
 }
+
 .form-wizard .form-control:focus {
   box-shadow: none;
 }
+
 .form-wizard .form-group {
   position: relative;
   margin: 30px 0;
 }
+
 .form-wizard .wizard-form-text-label {
   position: absolute;
   left: 10px;
   top: 16px;
   transition: 0.2s linear all;
 }
+
 .form-wizard .focus-input .wizard-form-text-label {
   color: #f0b212;
   top: -18px;
   transition: 0.2s linear all;
   font-size: 12px;
 }
+
 .form-wizard #labelLogo {
   color: #f0b212;
   top: -18px;
   font-size: 14px;
 }
+
 .form-wizard .form-wizard-steps {
   margin: 30px 0;
 }
+
 .form-wizard .form-wizard-steps li {
   width: 25%;
   float: left;
   position: relative;
 }
+
 .form-wizard .form-wizard-steps li::after {
   background-color: #f3f3f3;
   content: "";
@@ -257,6 +287,7 @@ body {
   border-bottom: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
 }
+
 .form-wizard .form-wizard-steps li span {
   background-color: #dddddd;
   border-radius: 50%;
@@ -268,26 +299,32 @@ body {
   width: 40px;
   z-index: 1;
 }
+
 .form-wizard .form-wizard-steps li:last-child::after {
   width: 50%;
 }
+
 .form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
   background-color: #f0b212;
   color: #ffffff;
 }
+
 .form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
   background-color: #f0b212;
   left: 50%;
   width: 50%;
   border-color: #f0b212;
 }
+
 .form-wizard .form-wizard-steps li.activated::after {
   width: 100%;
   border-color: #f0b212;
 }
+
 .form-wizard .form-wizard-steps li:last-child::after {
   left: 0;
 }
+
 .form-wizard .wizard-password-eye {
   position: absolute;
   right: 32px;
@@ -295,6 +332,7 @@ body {
   transform: translateY(-50%);
   cursor: pointer;
 }
+
 @keyframes click-radio-wave {
   0% {
     width: 25px;
@@ -310,6 +348,7 @@ body {
     opacity: 0.0;
   }
 }
+
 @media screen and (max-width: 767px) {
   .wizard-content-left {
     height: auto;

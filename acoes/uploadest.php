@@ -2,10 +2,11 @@
 	session_start();
 
 	if( empty($_FILES['estLogo']) ){
-		echo "Parou aqui"; //se nao houver fotos na interface
+		 //se nao houver fotos na interface
 		$estLogo = null;
-	}else{ 
-		$estLogo = $_FILES['estLogo']; //sen�o, l� a foto e joga na variavel
+	}
+	else{ 
+		$estLogo = $_FILES['estLogo']; //sennao, pega a foto e joga na variavel
 	}
 
 	if(!empty($estLogo["tmp_name"])) {

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	$id_estab = $_GET['id'];
-
+			//recebe as informaçoes vindo do form
 	empty($_REQUEST["estNome"])         ? $estNome = ""         : $estNome = $_REQUEST["estNome"];
 	empty($_REQUEST["estDocumento"])    ? $estDocumento = ""    : $estDocumento = $_REQUEST["estDocumento"];
 	empty($_FILES["estLogo"])         	? $estLogo = ""         : $estLogo = $_FILES["estLogo"];
@@ -18,7 +18,6 @@
 	empty($_REQUEST["estSenha"])        ? $estSenha = ""        : $estSenha = $_REQUEST["estSenha"];
 
 	include("conexao.php");
-
 			//Select para verificar se o estabelecimento jánão está cadastrado
 	$sql = "Select * from estabelecimentos where estNome = '".$estNome."'";
 	$resultado = mysqli_query($conn,$sql);

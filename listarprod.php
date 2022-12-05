@@ -1,24 +1,27 @@
 <?php
     session_start();
     include_once('./acoes/conexao.php');
-    
+        //aqui identifica qual e de onde esta vindo o id
     if(!is_null(@$_GET['id_estab'])){
         $id_estab = $_GET['id_estab'];
     }
-    else if(!is_null(@$_GET['id_estab_delete'])){
+    else if(!is_null(@$_GET['id_estab_delete'])){ //pega o id vindo do delete
         $id_estab = $_GET['id_estab_delete'];
     }
 
-    if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true) and (!isset($_SESSION['estId']) == true )){
+    if((!isset($_SESSION['estEmail']) == true) and (!isset($_SESSION['estSenha']) == true) 
+    and (!isset($_SESSION['estId']) == true )){
         unset($_SESSION['estEmail']);
         unset($_SESSION['estSenha']);
         header('Location: index.html');
-    }else{
+    }
+    else{
              
         if(!empty($_GET['search'])){
             $data = $_GET['search'];
-
-            $sql = "SELECT p.proId, p.proNome, p.proPreco, t.tamNome, ct.catNome, p.proDescricao, date_format(p.proAtualizacao, '%d  %m. %Y') as dataAtualizacao, p.proImagem FROM produtos p
+                    //realiza o select com o que foi inserido no campo de busca
+            $sql = "SELECT p.proId, p.proNome, p.proPreco, t.tamNome, ct.catNome, p.proDescricao, 
+            date_format(p.proAtualizacao, '%d  %m. %Y') as dataAtualizacao, p.proImagem FROM produtos p
                 INNER JOIN estabelecimentos e
                 ON e.estId = p.est_Id
                 INNER JOIN tamanhos t
@@ -28,12 +31,13 @@
                 WHERE p.est_Id = '$id_estab'  
                 AND (p.proNome LIKE '%$data%' or p.proDescricao LIKE '%$data%') 
                 ORDER BY cat_Id, proNome ASC, tam_Id asc";
-
+                    //realiza o select trazendo o nome e a logo do estabelecimento
             $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
         }
         else{
-        
-            $sql = "SELECT p.proId, p.proNome, p.proPreco, t.tamNome, ct.catNome, p.proDescricao, date_format(p.proAtualizacao, '%d  %b.  %Y') as dataAtualizacao, p.proImagem FROM produtos p
+                    //realiza o select dos produtos assim que o usuario loga
+            $sql = "SELECT p.proId, p.proNome, p.proPreco, t.tamNome, ct.catNome, p.proDescricao, 
+            date_format(p.proAtualizacao, '%d  %b.  %Y') as dataAtualizacao, p.proImagem FROM produtos p
                 INNER JOIN estabelecimentos e
                 ON e.estId = p.est_Id
                 INNER JOIN tamanhos t
@@ -42,11 +46,8 @@
                 ON ct.catId = p.cat_Id
                 WHERE p.est_Id = ".$id_estab."
                 ORDER BY cat_Id, proNome ASC, tam_Id asc";
-
-            $sql1 = "SELECT e.estNome, e.estLogo, c.cidNome, c.ufSigla FROM estabelecimentos e
-            Inner JOIN cidades c
-            ON e.cid_Id = c.cidId 
-            WHERE estId = '$id_estab'";
+                //realiza o select trazendo o nome e a logo do estabelecimento
+            $sql1 = "SELECT estNome, estLogo FROM estabelecimentos WHERE estId = '$id_estab'";
 
         }
 
@@ -58,8 +59,10 @@
     }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -71,9 +74,9 @@
         <!-- biblioteca de icones -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <!-- CSS comum -->
-        <link rel="stylesheet" href="./css/listarprod.css">
-        
+        <link rel="stylesheet" href="./css/listarprod.css"> 
     </head>
+
     <body>
         
         <header class="header">
@@ -82,10 +85,12 @@
                     <img src="./images/Logo.svg" alt="">
                 </a>
             </div>
+            
             <div id="logout" >
                 <a href="./acoes/logout.php">Logout</a>
             </div>
         </header>
+
         <div class="content">
             <div class="box-search">
                 <input type="search" class="form-control w=25" placeholder="Pesquisar" id="pesquisar">
@@ -127,8 +132,11 @@
                            
                         </tr>
                     </thead>
+
                     <tbody>
+
                         <?php
+
                             while($user_data = mysqli_fetch_array($result)){
                                 echo "<tr>";
                                    '<input type="hidden" id="produto" value="'.$user_data['proId'].'">';
@@ -156,12 +164,19 @@
                                 </td>";
                                 echo "</tr>";
                             }
+
                         ?>
+                        
                     </tbody>
+
                 </table>
+
             </div>
+
         </div>
+
     </body>
+
         
     <script> //script do campo de busca e alert de confirmação de exclusao
         var search = document.getElementById('pesquisar');

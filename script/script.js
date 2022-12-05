@@ -1,21 +1,12 @@
+		//script do cadastro em etapas da tela de cadastro de estabelecimento
+		//funcao para botao de proximo e anterior
 jQuery(document).ready(function() {
-	// click on next button
+	// clique no próximo botão
 	jQuery('.form-wizard-next-btn').click(function() {
 		var parentFieldset = jQuery(this).parents('.wizard-fieldset');
 		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
 		var next = jQuery(this);
 		var nextWizardStep = true;
-		// parentFieldset.find('.wizard-required').each(function(){
-		// 	var thisValue = jQuery(this).val();
-
-		// 	if( thisValue == "") {
-		// 		jQuery(this).siblings(".wizard-form-error").slideDown();
-		// 		nextWizardStep = false;
-		// 	}
-		// 	else {
-		// 		jQuery(this).siblings(".wizard-form-error").slideUp();
-		// 	}
-		// });
 		if( nextWizardStep) {
 			next.parents('.wizard-fieldset').removeClass("show","400");
 			currentActiveStep.removeClass('active').addClass('activated').next().addClass('active',"400");
@@ -37,7 +28,8 @@ jQuery(document).ready(function() {
 			});
 		}
 	});
-	//click on previous button
+
+	//clique no botão anterior
 	jQuery('.form-wizard-previous-btn').click(function() {
 		var counter = parseInt(jQuery(".wizard-counter").text());;
 		var prev =jQuery(this);
@@ -61,7 +53,8 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
-	//click on form submit button
+
+	//clique no botão enviar formulário
 	jQuery(document).on("click",".form-wizard .form-wizard-submit" , function(){
 		var parentFieldset = jQuery(this).parents('.wizard-fieldset');
 		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
@@ -75,7 +68,8 @@ jQuery(document).ready(function() {
 			}
 		});
 	});
-	// focus on input field check empty or not
+	
+	// foco no campo de entrada verifique se está vazio ou não
 	jQuery(".form-control").on('focus', function(){
 		var tmpThis = jQuery(this).val();
 		if(tmpThis == '' ) {
